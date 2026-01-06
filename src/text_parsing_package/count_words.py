@@ -1,5 +1,5 @@
 
-def count_unique_words(text: str) -> dict:
+def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
     """
     Count the instances of unique words in a text string.
 
@@ -13,6 +13,9 @@ def count_unique_words(text: str) -> dict:
     text : str
         string of text to count instances of case sensitive unique words
     
+    ignore_words: list[str]
+        list of strings of words to exclude from the counting.
+        
     Returns
     -------
     word_count_dict: dict
@@ -22,7 +25,10 @@ def count_unique_words(text: str) -> dict:
     ------
     TypeError
         If input type is incorrect.
-    
+
+    Examples
+    --------
+
     """
 
     ...
