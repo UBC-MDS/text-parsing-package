@@ -64,4 +64,4 @@ Text analysis package examples:
 [spaCy](https://pypi.org/project/spacy/)
 
 ## License
-The software code contained within this repository is licensed under the MIT license. See the license file for more information.
+The software code contained within this repository is licensed under the [MIT license](https://spdx.org/licenses/MIT.html). See the license file for more information.
