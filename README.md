@@ -48,15 +48,19 @@ same final output as existing packages. Examples of existing packages are shown 
 Text visualization package examples:
 
 [WordCloud](https://pypi.org/project/wordcloud/)
+
 [Scattertext](https://pypi.org/project/scattertext/)
 
 Text cleaning/preprocessing package examples:
 
 [CleanText](https://pypi.org/project/cleantext/)
+
 [clean-text](https://pypi.org/project/clean-text/)
 
 Text analysis package examples:
+
 [NLTK](https://pypi.org/project/nltk/)
+
 [spaCy](https://pypi.org/project/spacy/)
 
 ## License
