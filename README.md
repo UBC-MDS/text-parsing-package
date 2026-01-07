@@ -6,11 +6,31 @@ Rebecca Sokol-Snyder (@rsokolsnyder), Wes Beard (@beardw), Jacob Cann (@Jacob-F-
 
 ## Summary
 
-
+The following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data.
+The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand
+what the text data they are working with looks like. Since processing, analyzing and visualizing text data is so common, this package
+provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices. Ease of use 
+and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of 
+generalization, which is already available in many other packages (see examples in *Relation to Existing Package Ecosystem*  below). 
+The functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use 
+being a stylistic design choice rather than different functionality altogether.
 
 ## Package Functions
 
+1. A function to clean/preprocess a block of input text data.
+- The function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.
+- Options for how the text block shall be processed will be included in the function as optional arguments.
+- The function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.
 
+2. A function to count the number instances of unique words in a block of cleaned input text data.
+- The function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.
+- Optional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.
+- The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.
+
+3. A function to visualize the top counts or frequencies of occurrence of the words within the input text.
+- The function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.
+- Optional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.
+- The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.
 
 ## Relation to Existing Package Ecosystem
 
