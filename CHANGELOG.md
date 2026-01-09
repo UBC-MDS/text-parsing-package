@@ -17,3 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changes Added by @rsokolsnyder
 - Function description/specification written without code implementation for clean_text() in clean_text.py
 - CONTRIBUTING.MD updated to remove bug fix and feature implementations
+
+### Changes Added by @beardw
+- Function description/specification written without code implementation for word_chart() in word_chart.py
+- Added a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.
+- Updated CODE_OF_CONDUCT.md contact individuals.
