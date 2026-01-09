@@ -12,3 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.0] - (1979-01-01)
 
 - First release
+
+## Changes Added by @Jacob-F-Cann
+- Function description/specification written without code implementation for count_unique_words() in count_words.py
+- README.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.
