@@ -58,11 +58,10 @@ representative at an online or offline event.
 
 ## Enforcement
 
-[//]: # (TODO: You need to choose whom and how to contact them.)
-
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at
-\[INSERT CONTACT METHOD\].
+reported to one of the community leaders responsible for enforcement: 
+Rebecca Sokol-Snyder(@rsokolsnyder), Wes Beard (@beardw), 
+or Jacob Cann (@Jacob-F-Cann).
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
