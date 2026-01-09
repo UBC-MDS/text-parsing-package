@@ -2,21 +2,20 @@
 A module cleans a string of text and parses it into a list of individual words
 """
 
-def clean_text(text, pref_case="lower", rm_all_punc=True, punctuation=None) -> list:
+def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, punctuation: list = None) -> list:
     """
-    Cleans a string of text according to function arguments
+    Cleans a string of text according to function arguments.
 
     Parameters
     ----------
     text : str
         Any string of words, with or without punctuation.
-    pref_case : str, default="lower"
-        The case to convert the string to - possible values are "upper", 
-        "lower", "asis"
+    pref_case : str, {"lower", "upper", "asis"}, default="lower"
+        The case to convert the string to. "asis" indicates that the type case should not be changed
     rm_all_punc : bool, default=True
-        Indicates whether all punctuation should be removed from the string
+        Indicates whether ALL punctuation should be removed from the string
     punctuation : list or None, default=None
-        If rm_all_punc is false, a list of specific punctuation to remove can be provided here to only remove certain punctuation marks
+        Only used if rm_all_punc is false, punctuation should be a list of specific punctuation to remove, all other punctuation will remain in the clean text string.
         
     Returns
     -------
