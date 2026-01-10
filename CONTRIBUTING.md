@@ -72,3 +72,7 @@ local development.
 
 Note that your pull request will automatically be checked by the full test
 suite. It needs to pass all of them before it can be considered for merging.
+
+## Code of Conduct
+Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+By participating in this project you agree to abide by its terms.
