@@ -13,10 +13,10 @@ def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
     Parameters
     ----------
     text : str
-        string of text to count instances of case sensitive unique words
+        string of text to count instances of case sensitive unique words.
     
-    ignore_words: list[str]
-        list of strings of words to exclude from the counting.
+    ignore_words: list[str], default=None
+        list of strings of words to exclude from the counting, by default all unique words are included.
         
     Returns
     -------
