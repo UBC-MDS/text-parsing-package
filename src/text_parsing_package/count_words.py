@@ -31,7 +31,7 @@ def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
     Examples
     --------
     word_count_dict = count_unique_words('I go where I go')
-    >>> {'I': 2, 'go': 2, }
+    >>> {'I': 2, 'go': 2, where: 1}
 
     word_count_dict = count_unique_words('The the the thing', ignore_words = ['the'])
     >>> {'thing': 1}
