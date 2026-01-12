@@ -1,8 +1,7 @@
 """
 A module containing the count_unique_words function for general use or in
-conjunction with other modules in the text parsing package.
-
-
+conjunction with other modules in the text parsing package. This module aids
+in numerically analyzing the frequency of unique words in a section of text.
 """
 
 def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
