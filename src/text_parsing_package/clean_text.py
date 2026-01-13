@@ -2,7 +2,7 @@
 A module cleans a string of text and parses it into a list of individual words
 """
 
-def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, punctuation: list = None) -> list:
+def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, punctuation: list = None) -> str:
     """
     Cleans a string of text according to function arguments.
 
