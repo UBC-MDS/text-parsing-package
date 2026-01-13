@@ -29,6 +29,13 @@ def word_chart(words: dict, display_limit: int = 10, display_order: str = "desce
     altair.vegalite.v5.api.Chart
         A bar chart of most or least popular words.
 
+    Raises
+    ------
+    TypeError
+        If the parameter(s) are not of the correct type.
+    ValueError
+        If 'display_order' parameter is a valid option.
+        
     Examples
     --------
     >>> word_dict = {"apple": 12, "river": 27, "cloud": 5, "stone": 19}
