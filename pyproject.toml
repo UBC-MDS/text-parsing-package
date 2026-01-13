@@ -38,7 +38,9 @@ classifiers = [
 # TODO: add keywords
 keywords = []
 # TODO: add dependencies
-dependencies = []
+dependencies = [
+    "re"
+]
 
 [project.urls]
 Homepage = "https://github.com/rsokolsnyder/text-parsing-package"
