@@ -1,6 +1,7 @@
 """
 A module cleans a string of text and parses it into a list of individual words
 """
+import re
 
 def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, punctuation: list = None) -> str:
     """
@@ -31,4 +32,25 @@ def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, pu
     "HELLO IT IS SO LOVELY TO MEET YOU TODAY."
 
     """
-    ...
+    
+    if not isinstance(text, str):
+        raise TypeError(f"Expected the test input to be of type str, got {type(text)}")
+
+    # replace non-space whitespaces in text
+    text = re.sub(r'[^\S ]', ' ', text)
+
+    # case conversion
+    if pref_case == "lower":
+        text = text.lower()
+    elif pref_case == "upper":
+        text = text.upper()
+    elif pref_case == "asis":
+        pass
+    else:
+        raise ValueError(f"Expected pref_case value in ('lower', 'upper', 'asis'), got '{pref_case}'")
+    
+    # punctuation
+    if rm_all_punc:
+        text = re.sub(r'[^\w\s]', '', text)
+    
+    return text
