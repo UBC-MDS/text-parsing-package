@@ -11,7 +11,7 @@ import re
 
 def count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bool = False) -> dict[str, int]:
     """
-    Count the instances of unique words in a text string.
+    Count the instances of unique, case-sensitive words in a text string.
 
     Input text is assumed to be separated by single spaces and punctuation
     has been removed. Additional pre-processing is required for correct word
@@ -52,7 +52,15 @@ def count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bo
 
     # Check the input type for the text parameter is a string
     if not isinstance(text, str):
-        raise TypeError(f'"text" parameter must be a str not {type(text)}.')
+        raise TypeError(f'"text" parameter must be a str, not a {type(text)}.')
+    
+    # Check the input type for the ignore_words parameter is a list[str] or None
+    if ignore_words is not None and not isinstance(ignore_words, list):
+        raise TypeError(f'"ignore_words" parameter must be a list[str] | None, not a {type(ignore_words)}.')
+    
+    # Check the input type for the count_punc parameter is a string
+    if not isinstance(count_punc, bool):
+        raise TypeError(f'"count_punc" parameter must be a bool, not a {type(count_punc)}.')
 
     # If the passed string is empty return and empty dict and warn the user
     if len(text)==0:
@@ -84,7 +92,3 @@ def count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bo
     word_count_dict.pop('', None)
 
     return word_count_dict
-
-print(count_unique_words('I go you go.', count_punc=True))
-print(count_unique_words('I go you go.', ignore_words=['you'], count_punc=True))
-print(count_unique_words("I'll be home soon!", count_punc=True))
