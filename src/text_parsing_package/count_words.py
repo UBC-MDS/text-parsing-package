@@ -4,7 +4,12 @@ conjunction with other modules in the text parsing package. This module aids
 in numerically analyzing the frequency of unique words in a section of text.
 """
 
-def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
+# Import Counter, re and warnings from base python package
+from collections import Counter
+import warnings
+import re
+
+def count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bool = False) -> dict[str, int]:
     """
     Count the instances of unique words in a text string.
 
@@ -20,6 +25,10 @@ def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
     
     ignore_words: list[str], default=None
         list of strings of words to exclude from the counting, by default all unique words are included.
+
+    count_punc: bool, default=False
+        option to count the instances of unique punctuation in the input text string if set to True,
+        otherwise all punctuation is removed by default.
         
     Returns
     -------
@@ -41,4 +50,41 @@ def count_unique_words(text: str, ignore_words: list[str] = None) -> dict:
 
     """
 
-    ...
+    # Check the input type for the text parameter is a string
+    if not isinstance(text, str):
+        raise TypeError(f'"text" parameter must be a str not {type(text)}.')
+
+    # If the passed string is empty return and empty dict and warn the user
+    if len(text)==0:
+        word_count_dict = {}
+        warnings.warn('You passed "text" as a string, returning an empty word_count_dict.')
+        return word_count_dict
+    
+    # Remove punctuation unless user explicitly wants unique punctuation instances to be counted
+    if not count_punc:
+        # Remove all punctuation if the default value for count_punc is used
+        text = re.sub(r"[^\w\s']", '', text)
+    else:
+        # Extra spaces added to any matched punctuation to be counted for the split below
+        text = re.sub(r"[^\w\s']", r' \g<0>', text)
+    
+    # assume a new word occurs on a space, if not use the clean_text function first
+    words_list = text.split(' ')
+
+    # built-in function to count repeated strings in a list this instead of building 
+    # from scratch which may result in have bad time complexity
+    word_count_dict = dict(Counter(words_list))
+
+    # If ignore_words is passed as non-empty list[str], remove these keys from the dict
+    if ignore_words!=None and len(ignore_words)>0:
+        for word in ignore_words:
+            word_count_dict.pop(word, None)
+    
+    # Remove any empty space keys if they exist from punctuation counting
+    word_count_dict.pop('', None)
+
+    return word_count_dict
+
+print(count_unique_words('I go you go.', count_punc=True))
+print(count_unique_words('I go you go.', ignore_words=['you'], count_punc=True))
+print(count_unique_words("I'll be home soon!", count_punc=True))
