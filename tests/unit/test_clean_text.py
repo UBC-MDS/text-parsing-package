@@ -33,14 +33,14 @@ def test_clean_text_function_args():
     expected = "hello it is so lovely to meet you today."
     assert actual == expected
 
-str_with_other_whitespace = "Hello  nice to meet     you"
+str_with_other_whitespace = "Hello\tnice to meet\nyou"
 
 def test_clean_text_whitespace():
     """
     Tests that other whitespace characters are replaced by spaces
     """
     actual = clean_text(str_with_other_whitespace)
-    expected = "hello it is so lovely to meet you today"
+    expected = "hello nice to meet you"
     assert actual == expected
 
 def test_clean_text_wrong_input():
