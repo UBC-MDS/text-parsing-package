@@ -65,7 +65,7 @@ def count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bo
     # If the passed string is empty return and empty dict and warn the user
     if len(text)==0:
         word_count_dict = {}
-        warnings.warn('You passed "text" as a string, returning an empty word_count_dict.')
+        warnings.warn(f'You passed "{text}" as a string, returning an empty word_count_dict.')
         return word_count_dict
     
     # Remove punctuation unless user explicitly wants unique punctuation instances to be counted
