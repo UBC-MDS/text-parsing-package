@@ -30,8 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Changes Added by @Jacob-F-Cann
 - Write the initial count_unique_words function implementation
 - Write unit tests for expected and unexpected input to the count_unique_words function
-- Validate tests pass using pytest commands
-
+- Validate tests pass using pytest commands and add dependencies to pyproject.toml
 
 ### Changes Added by @rsokolsnyder
 
