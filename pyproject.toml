@@ -39,7 +39,7 @@ classifiers = [
 keywords = []
 # TODO: add dependencies
 dependencies = [
-    "re",
+    "re"
     "altair",
     "pandas",
     "collections",

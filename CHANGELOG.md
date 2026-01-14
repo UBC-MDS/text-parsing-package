@@ -33,6 +33,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Validate tests pass using pytest commands and add dependencies to pyproject.toml
 
 ### Changes Added by @rsokolsnyder
+- Write function implementation for clean_text() in clean_text.py
+- Add unit tests for clean_text() in test_clean_text.py
+- Add dependencies to pyproject.toml
 
 
 ### Changes Added by @beardw
