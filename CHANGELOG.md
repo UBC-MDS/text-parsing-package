@@ -22,3 +22,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Function description/specification written without code implementation for word_chart() in word_chart.py
 - Added a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.
 - Updated CODE_OF_CONDUCT.md contact individuals.
+
+## [0.0.2] - (2026-01-17)
+
+- Second release
+
+### Changes Added by @Jacob-F-Cann
+
+
+### Changes Added by @rsokolsnyder
+
+
+### Changes Added by @beardw
+- Write word_chart.py function internals.
+- Implement unit tests for word_chart.py.
+- Added word_chart.py package dependencies to pyproject.toml
+
