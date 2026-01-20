@@ -5,7 +5,7 @@ import pandas as pd
 A module that creates a bar chart from a dictionary of words and their counts.
 """
 
-def word_chart(words: dict, display_limit: int = 10, display_order: str = "descending") -> alt.vegalite.v5.api.Chart:
+def word_chart(words: dict, display_limit: int = 10, display_order: str = "descending"): #-> alt.vegalite.v5.api.Chart:
     """A sorted bar chart of words and their total counts.
 
     This function takes in a dictionary of words and, along with their counts,
