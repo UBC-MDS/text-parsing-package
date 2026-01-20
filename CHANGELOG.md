@@ -43,3 +43,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implement unit tests for word_chart.py.
 - Added word_chart.py package dependencies to pyproject.toml
 
+## [0.0.3] - (2026-01-23)
+
+- Third release
+
+## Changes Added by @rsokolsnyder
+- Add GitHub Action to run test suite
