@@ -35,6 +35,15 @@ def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, pu
     
     if not isinstance(text, str):
         raise TypeError(f"Expected the test input to be of type str, got {type(text)}")
+    
+    if not isinstance(pref_case, str):
+        raise TypeError(f"Expected the preferred case to be of type str, got {type(pref_case)}")
+    
+    if not isinstance(rm_all_punc, bool):
+        raise TypeError(f"Expected the rm_all_punc to be of type bool, got {type(rm_all_punc)}")
+
+    if not isinstance(punctuation, list):
+        raise TypeError(f"Expected the punctuation arg to be of type list, got {type(punctuation)}")
 
     # replace non-space whitespaces in text
     text = re.sub(r'[^\S ]', ' ', text)
