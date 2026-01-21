@@ -94,4 +94,4 @@ jobs:
             pip install \
             --index-url https://test.pypi.org/simple/ \
             --extra-index-url https://pypi.org/simple \
-            pycounts_tt_2024
+            text_parsing_package
