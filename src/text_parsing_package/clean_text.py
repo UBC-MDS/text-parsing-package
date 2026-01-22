@@ -21,7 +21,7 @@ def clean_text(text: str, pref_case: str = "lower", rm_all_punc: bool = True, pu
     Returns
     -------
     string
-       A cleaned string without whitespace other than spaces, coverted to a specific case if relevant and with punctuation removed as specified
+        A cleaned string without whitespace other than spaces, coverted to a specific case if relevant and with punctuation removed as specified
 
     Examples
     --------
