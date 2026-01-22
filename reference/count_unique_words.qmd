@@ -1,0 +1,46 @@
+# count_unique_words { #text_parsing_package.count_unique_words }
+
+```python
+count_unique_words(text, ignore_words=None, count_punc=False)
+```
+
+Count the instances of unique, case-sensitive words in a text string.
+
+Input text is assumed to be separated by single spaces and punctuation
+has been removed. Additional pre-processing is required for correct word
+parsing and counting if the input text words are not separated by single
+spaces and/or the text contains punctuation.
+
+## Parameters {.doc-section .doc-section-parameters}
+
+| Name         | Type        | Description                                                                                                                                   | Default    |
+|--------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| text         | str         | string of text to count instances of case sensitive unique words.                                                                             | _required_ |
+| ignore_words | list\[str\] | list of strings of words to exclude from the counting, by default all unique words are included.                                              | `None`     |
+| count_punc   | bool        | option to count the instances of unique punctuation in the input text string if set to True, otherwise all punctuation is removed by default. | `False`    |
+
+## Returns {.doc-section .doc-section-returns}
+
+| Name            | Type   | Description                                                      |
+|-----------------|--------|------------------------------------------------------------------|
+| word_count_dict | dict   | A dictionary of words as str keys and their counts as int values |
+
+## Raises {.doc-section .doc-section-raises}
+
+| Name   | Type      | Description                 |
+|--------|-----------|-----------------------------|
+|        | TypeError | If input type is incorrect. |
+
+## Examples {.doc-section .doc-section-examples}
+
+word_count_dict = count_unique_words('I go where I go')
+
+```python
+>>> {'I': 2, 'go': 2, where: 1}
+```
+
+word_count_dict = count_unique_words('The the the thing', ignore_words = ['the'])
+
+```python
+>>> {'thing': 1}
+```
