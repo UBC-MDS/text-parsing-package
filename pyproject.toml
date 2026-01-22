@@ -45,9 +45,9 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/rsokolsnyder/text-parsing-package"
-"Source Code" = "https://github.com/rsokolsnyder/text-parsing-package"
+"Source Code" = "https://github.com/UBC-MDS/text-parsing-package/tree/main/src/text_parsing_package"
 "Bug Tracker" = "https://github.com/rsokolsnyder/text-parsing-package/issues"
-Documentation = "https://github.com/rsokolsnyder/text-parsing-package/blob/main/README.md"
+Documentation = "https://ubc-mds.github.io/text-parsing-package"
 Download = "https://pypi.org/project/text-parsing-package/#files"
 
 [project.optional-dependencies]
