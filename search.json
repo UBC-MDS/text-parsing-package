@@ -1,0 +1,349 @@
+[
+  {
+    "objectID": "reference/count_unique_words.html",
+    "href": "reference/count_unique_words.html",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "count_unique_words(text, ignore_words=None, count_punc=False)\nCount the instances of unique, case-sensitive words in a text string.\nInput text is assumed to be separated by single spaces and punctuation has been removed. Additional pre-processing is required for correct word parsing and counting if the input text words are not separated by single spaces and/or the text contains punctuation.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nstring of text to count instances of case sensitive unique words.\nrequired\n\n\nignore_words\nlist[str]\nlist of strings of words to exclude from the counting, by default all unique words are included.\nNone\n\n\ncount_punc\nbool\noption to count the instances of unique punctuation in the input text string if set to True, otherwise all punctuation is removed by default.\nFalse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\nword_count_dict\ndict\nA dictionary of words as str keys and their counts as int values\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input type is incorrect.\n\n\n\n\n\n\nword_count_dict = count_unique_words(‘I go where I go’)\n&gt;&gt;&gt; {'I': 2, 'go': 2, where: 1}\nword_count_dict = count_unique_words(‘The the the thing’, ignore_words = [‘the’])\n&gt;&gt;&gt; {'thing': 1}",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#parameters",
+    "href": "reference/count_unique_words.html#parameters",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nstring of text to count instances of case sensitive unique words.\nrequired\n\n\nignore_words\nlist[str]\nlist of strings of words to exclude from the counting, by default all unique words are included.\nNone\n\n\ncount_punc\nbool\noption to count the instances of unique punctuation in the input text string if set to True, otherwise all punctuation is removed by default.\nFalse",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#returns",
+    "href": "reference/count_unique_words.html#returns",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\nword_count_dict\ndict\nA dictionary of words as str keys and their counts as int values",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#raises",
+    "href": "reference/count_unique_words.html#raises",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf input type is incorrect.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#examples",
+    "href": "reference/count_unique_words.html#examples",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "word_count_dict = count_unique_words(‘I go where I go’)\n&gt;&gt;&gt; {'I': 2, 'go': 2, where: 1}\nword_count_dict = count_unique_words(‘The the the thing’, ignore_words = [‘the’])\n&gt;&gt;&gt; {'thing': 1}",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/word_chart.html",
+    "href": "reference/word_chart.html",
+    "title": "word_chart",
+    "section": "",
+    "text": "word_chart\n\n\n\n\n\nName\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "word_chart"
+    ]
+  },
+  {
+    "objectID": "reference/word_chart.html#functions",
+    "href": "reference/word_chart.html#functions",
+    "title": "word_chart",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "word_chart"
+    ]
+  },
+  {
+    "objectID": "DEVELOPMENT.html",
+    "href": "DEVELOPMENT.html",
+    "title": "Development Guide",
+    "section": "",
+    "text": "Welcome to your shiny new package. This page will help you get started with using Hatch to manage your package.\nIf you look at your project, you will see that a pyproject.toml file. This file stores both your package configuration and settings for development tools like Hatch that you will use to work on your package.\nThis file is written using a .toml format. You can learn more about toml here. Here’s the TL&DR:\n\nEach [] section in the toml file is called a table.\nYou can nest tables with double brackets like this[[]]\nTables contain information about a element that you want to configure.\n\nWe are using Hatch as the default packaging tool. Hatch allows you to configure and run environments and scripts similar to workflow tools like tox or nox.\nHach, by default, uses virtual environments (venv) to manage environments. But you can configure it to use other environment tools.Read the hatch documentation to learn more about environments.\nFor this template, we have set up Hatch environments for you to use. At the bottom of your pyproject.toml file, notice a hatch environment section that looks like this:\n########################################\n# Hatch Environments\n########################################\nBelow is the Hatch environment to install your package. Notice that it defines pip and twine as two packages that the environment needs.\n[tool.hatch.envs.build]\ndescription = \"\"\"Test the installation the package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\nThe table below defines the scripts that you will run build and check your package.\n[tool.hatch.envs.build.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\ndetached = true\nYou can enter that environment to check it out:\n$ hatch shell build\nIf you run pip list, in the environment, twine will be there:\n$ pip list\nHatch by default, installs your package in editable mode (-e) into its virtual environments. But if detached=True is set, then it will skip installing your package into the virtual enviornment.\n\n\nBelow you see the Hatch environment test table.\ntool.hatch.envs says, “Hey, Hatch, this is the definition for an environment.” test is the name of the environment.\nThe environment below defines the dependencies that Hatch needs to install into the environment named test.\n[tool.hatch.envs.test]\ndescription = \"\"\"Run the test suite.\"\"\"\ndependencies = [\n    \"pytest\",\n    \"pytest-cov\",\n    \"pytest-raises\",\n    \"pytest-randomly\",\n    \"pytest-xdist\",\n]\nTo enter a Hatch environment use:\nhatch shell environmentname\nSo you can enter the test environment above with:\nhatch shell test\n\n\n\nIf the environment has a matrix associated with it, that tells Hatch to run the test scripts across different Python versions.\n[[tool.hatch.envs.test.matrix]]\npython = [\"3.10\", \"3.11\", \"3.12\", \"3.13\"]\nIf you run hatch shell test, you will see the output below. To enter an environment with a matrix attached to it, you need to pick the Python environment version that you want to open.\n$ hatch shell test                           \nEnvironment `test` defines a matrix, choose one of the following instead:\n\ntest.py3.10\ntest.py3.11\ntest.py3.12\ntest.py3.13\nOpen the Python 3.13 environment like this:\n$ hatch shell test.py3.13\nTo leave an environment use:\n$ deactivate\n\n\n\nIn the tests section of your pyproject.toml, you will see a tool.hatch.envs.test.scripts table.\nThis table defines the commands that you want Hatch to run in the test environment. Notice that the script has one command called run.\n[tool.hatch.envs.test.scripts]\nrun = \"pytest {args:--cov=greatproject --cov-report=term-missing}\"\nTo run this script , use:\nhatch run test:run\n\nhatch run: calls Hatch and tells it that it will be running a command\ntest:run: defines the environment you want it to run (test) and defines the name of the “script” to berun.\n\nIf you have a Hatch matrix setup for tests, it will both install the necessary Python version using UV and run your tests on each version of the Python versions that you declare in the matrix table. In this case, there are 4 Python versions in the environment, so your tests will run 4 times, once in each Python version listed in the matrix table.\n@lwasser ➜ /workspaces/pyopensci-scipy25-create-python-package (main) $ hatch run test:run\n──────────────────────────────────────────────────────────────────────── test.py3.10 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.10.16, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1490740387\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.10.16-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n──────────────────────────────────────────────────────────────────────── test.py3.11 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.11.12, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1596865075\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.11.12-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n\n\n\nYou can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "DEVELOPMENT.html#build-your-package",
+    "href": "DEVELOPMENT.html#build-your-package",
+    "title": "Development Guide",
+    "section": "",
+    "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "Rebecca Sokol-Snyder (@rsokolsnyder), Wes Beard (@beardw), Jacob Cann (@Jacob-F-Cann)\n\n\n\nThe following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand what the text data they are working with looks like. Since processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices. Ease of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in Relation to Existing Package Ecosystem below). The functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether.\n\n\n\n\nA function to clean/preprocess a block of input text data.\n\n\nThe function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.\nOptions for how the text block shall be processed will be included in the function as optional arguments.\nThe function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.\n\n\nA function to count the number instances of unique words in a block of cleaned input text data.\n\n\nThe function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.\nOptional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.\n\n\nA function to visualize the top counts or frequencies of occurrence of the words within the input text.\n\n\nThe function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.\nOptional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.\n\n\n\n\nThere exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package. Similarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):\nText visualization package examples:\nWordCloud\nScattertext\nText cleaning/preprocessing package examples:\nCleanText\nclean-text\nText analysis package examples:\nNLTK\nspaCy\n\n\n\nThe software code contained within this repository is licensed under the MIT license. See the license file for more information."
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "Rebecca Sokol-Snyder (@rsokolsnyder), Wes Beard (@beardw), Jacob Cann (@Jacob-F-Cann)"
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "The following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand what the text data they are working with looks like. Since processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices. Ease of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in Relation to Existing Package Ecosystem below). The functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether."
+  },
+  {
+    "objectID": "index.html#package-functions",
+    "href": "index.html#package-functions",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "A function to clean/preprocess a block of input text data.\n\n\nThe function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.\nOptions for how the text block shall be processed will be included in the function as optional arguments.\nThe function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.\n\n\nA function to count the number instances of unique words in a block of cleaned input text data.\n\n\nThe function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.\nOptional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.\n\n\nA function to visualize the top counts or frequencies of occurrence of the words within the input text.\n\n\nThe function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.\nOptional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format."
+  },
+  {
+    "objectID": "index.html#relation-to-existing-package-ecosystem",
+    "href": "index.html#relation-to-existing-package-ecosystem",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "There exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package. Similarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):\nText visualization package examples:\nWordCloud\nScattertext\nText cleaning/preprocessing package examples:\nCleanText\nclean-text\nText analysis package examples:\nNLTK\nspaCy"
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "The software code contained within this repository is licensed under the MIT license. See the license file for more information."
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nFirst release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals.\n\n\n\n\n\n\nSecond release\n\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml\n\n\n\n\n\n\nThird release\n\n\n\n\n\nAdd GitHub Action to run test suite"
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "First release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals."
+  },
+  {
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
+    "title": "Changelog",
+    "section": "",
+    "text": "Second release"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
+    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
+    "title": "Changelog",
+    "section": "",
+    "text": "Write the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml"
+  },
+  {
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
+    "title": "Changelog",
+    "section": "",
+    "text": "Third release"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
+    "href": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
+    "title": "Changelog",
+    "section": "",
+    "text": "Add GitHub Action to run test suite"
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html",
+    "href": "CODE_OF_CONDUCT.html",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.\n\n\n\nExamples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting\n\n\n\n\nCommunity leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.\n\n\n\nThis Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.\n\n\n\nInstances of abusive, harassing, or otherwise unacceptable behavior may be reported to one of the community leaders responsible for enforcement: Rebecca Sokol-Snyder(@rsokolsnyder), Wes Beard (@beardw), or Jacob Cann (@Jacob-F-Cann). All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident.\n\n\n\nCommunity leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community.\n\n\n\n\nThis Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-pledge",
+    "href": "CODE_OF_CONDUCT.html#our-pledge",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.\nWe pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#our-standards",
+    "href": "CODE_OF_CONDUCT.html#our-standards",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Examples of behavior that contributes to a positive environment for our community include:\n\nDemonstrating empathy and kindness toward other people\nBeing respectful of differing opinions, viewpoints, and experiences\nGiving and gracefully accepting constructive feedback\nAccepting responsibility and apologizing to those affected by our mistakes, and learning from the experience\nFocusing on what is best not just for us as individuals, but for the overall community\n\nExamples of unacceptable behavior include:\n\nThe use of sexualized language or imagery, and sexual attention or advances of any kind\nTrolling, insulting or derogatory comments, and personal or political attacks\nPublic or private harassment\nPublishing others’ private information, such as a physical or email address, without their explicit permission\nOther conduct which could reasonably be considered inappropriate in a professional setting"
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "href": "CODE_OF_CONDUCT.html#enforcement-responsibilities",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.\nCommunity leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#scope",
+    "href": "CODE_OF_CONDUCT.html#scope",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement",
+    "href": "CODE_OF_CONDUCT.html#enforcement",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to one of the community leaders responsible for enforcement: Rebecca Sokol-Snyder(@rsokolsnyder), Wes Beard (@beardw), or Jacob Cann (@Jacob-F-Cann). All complaints will be reviewed and investigated promptly and fairly.\nAll community leaders are obligated to respect the privacy and security of the reporter of any incident."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "href": "CODE_OF_CONDUCT.html#enforcement-guidelines",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:\n\n\nCommunity Impact: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.\nConsequence: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.\n\n\n\nCommunity Impact: A violation through a single incident or series of actions.\nConsequence: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.\n\n\n\nCommunity Impact: A serious violation of community standards, including sustained inappropriate behavior.\nConsequence: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.\n\n\n\nCommunity Impact: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.\nConsequence: A permanent ban from any sort of public interaction within the community."
+  },
+  {
+    "objectID": "CODE_OF_CONDUCT.html#attribution",
+    "href": "CODE_OF_CONDUCT.html#attribution",
+    "title": "Contributor Covenant Code of Conduct",
+    "section": "",
+    "text": "This Code of Conduct is adapted from the Contributor Covenant, version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.\nCommunity Impact Guidelines were inspired by Mozilla’s code of conduct enforcement ladder.\nFor answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations."
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n\n\n\nCopyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "docs/index.html#overview",
+    "href": "docs/index.html#overview",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
+    "section": "",
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:"
+  },
+  {
+    "objectID": "docs/index.html#copyright",
+    "href": "docs/index.html#copyright",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
+    "section": "",
+    "text": "Copyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
+  },
+  {
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "Contributing",
+    "section": "",
+    "text": "Contributions are welcome for this package!\nThere are many ways to contibute including:\n\nReport bugs\nWrite Documentation\nSubmit Feedback\n\n\n\nReport bugs at https://github.com/UBC-MDS/text_parsing_package/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you.\n\n\n\nWe are always appreciative of additional documentation for text-parsing-package! Whether that is as part of the official documentation, in docstrings, or in other forums, just open an issue to share what you want to work on and we can help provide any additional information you might need.\n\n\n\nThe best way to send feedback is to file an issue at https://github.com/UBC-MDS/text_parsing_package/issues. If your feedback fits the format of one of the issue templates, please use that. Please remember that this package was developed as part of the UBC Master of Data Science program in partial fulfillment of the requirements for DSCI 524 Collaborative Data Science. As such, we may not be able to respond immediately.\n\n\n\nReady to contribute? Here’s how to set up text-parsing-package for local development.\n\nFork the https://github.com/UBC-MDS/text_parsing_package repository on GitHub.\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/text_parsing_package.git\nCreate a conda environment to work in and make sure that hatch is installed alongside Python.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use doc as a prefix for your branch name.\ngit checkout main\ngit checkout -b doc-name-of-your-documentation\nNow you can make your changes locally.\nCommit your changes and push your branch to GitHub. Please make commit messages clear.\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin doc-name-of-your-documentation\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nNote that your pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging.\n\n\n\n\nPlease note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#report-bugs",
+    "href": "CONTRIBUTING.html#report-bugs",
+    "title": "Contributing",
+    "section": "",
+    "text": "Report bugs at https://github.com/UBC-MDS/text_parsing_package/issues.\nIf you are reporting a bug, please follow the template guidelines. The more detailed your report, the easier and thus faster we can help you."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#write-documentation",
+    "href": "CONTRIBUTING.html#write-documentation",
+    "title": "Contributing",
+    "section": "",
+    "text": "We are always appreciative of additional documentation for text-parsing-package! Whether that is as part of the official documentation, in docstrings, or in other forums, just open an issue to share what you want to work on and we can help provide any additional information you might need."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#submit-feedback",
+    "href": "CONTRIBUTING.html#submit-feedback",
+    "title": "Contributing",
+    "section": "",
+    "text": "The best way to send feedback is to file an issue at https://github.com/UBC-MDS/text_parsing_package/issues. If your feedback fits the format of one of the issue templates, please use that. Please remember that this package was developed as part of the UBC Master of Data Science program in partial fulfillment of the requirements for DSCI 524 Collaborative Data Science. As such, we may not be able to respond immediately."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#get-started",
+    "href": "CONTRIBUTING.html#get-started",
+    "title": "Contributing",
+    "section": "",
+    "text": "Ready to contribute? Here’s how to set up text-parsing-package for local development.\n\nFork the https://github.com/UBC-MDS/text_parsing_package repository on GitHub.\nClone your fork locally (if you want to work locally)\ngit clone git@github.com:your_name_here/text_parsing_package.git\nCreate a conda environment to work in and make sure that hatch is installed alongside Python.\nCreate a branch for local development using the default branch (typically main) as a starting point. Use doc as a prefix for your branch name.\ngit checkout main\ngit checkout -b doc-name-of-your-documentation\nNow you can make your changes locally.\nCommit your changes and push your branch to GitHub. Please make commit messages clear.\ngit add .\ngit commit -m \"fix: summarize your changes\"\ngit push -u origin doc-name-of-your-documentation\nOpen the link displayed in the message when pushing your new branch in order to submit a pull request.\n\n\n\nNote that your pull request will automatically be checked by the full test suite. It needs to pass all of them before it can be considered for merging."
+  },
+  {
+    "objectID": "CONTRIBUTING.html#code-of-conduct",
+    "href": "CONTRIBUTING.html#code-of-conduct",
+    "title": "Contributing",
+    "section": "",
+    "text": "Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms."
+  },
+  {
+    "objectID": "reference/clean_text.html",
+    "href": "reference/clean_text.html",
+    "title": "clean_text",
+    "section": "",
+    "text": "clean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\n\n\n\nName\nDescription\n\n\n\n\nclean_text\nCleans a string of text according to function arguments.\n\n\n\n\n\nclean_text.clean_text(text, pref_case='lower', rm_all_punc=True, punctuation=[])\nCleans a string of text according to function arguments.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nAny string of words, with or without punctuation.\nrequired\n\n\npref_case\n(str, {lower, upper, asis})\nThe case to convert the string to. “asis” indicates that the type case should not be changed\n\"lower\"\n\n\nrm_all_punc\nbool\nIndicates whether ALL punctuation should be removed from the string\nTrue\n\n\npunctuation\nlist\nOnly used if rm_all_punc is false, punctuation should be a list of specific punctuation to remove, all other punctuation will remain in the clean text string.\n[]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nstring\nA cleaned string without whitespace other than spaces, coverted to a specific case if relevant and with punctuation removed as specified\n\n\n\n\n\n\n&gt;&gt;&gt; clean_text(\"Hello, it is so lovely to meet you today.\")\n\"hello it is so lovely to meet you today\"\n&gt;&gt;&gt; clean_text(\"Hello, it is so lovely to meet you today.\", pref_case=\"upper\", rm_all_punc=False, punctuation=[\",\", \"!\"])\n\"HELLO IT IS SO LOVELY TO MEET YOU TODAY.\"",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "clean_text"
+    ]
+  },
+  {
+    "objectID": "reference/clean_text.html#functions",
+    "href": "reference/clean_text.html#functions",
+    "title": "clean_text",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nclean_text\nCleans a string of text according to function arguments.\n\n\n\n\n\nclean_text.clean_text(text, pref_case='lower', rm_all_punc=True, punctuation=[])\nCleans a string of text according to function arguments.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nAny string of words, with or without punctuation.\nrequired\n\n\npref_case\n(str, {lower, upper, asis})\nThe case to convert the string to. “asis” indicates that the type case should not be changed\n\"lower\"\n\n\nrm_all_punc\nbool\nIndicates whether ALL punctuation should be removed from the string\nTrue\n\n\npunctuation\nlist\nOnly used if rm_all_punc is false, punctuation should be a list of specific punctuation to remove, all other punctuation will remain in the clean text string.\n[]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nstring\nA cleaned string without whitespace other than spaces, coverted to a specific case if relevant and with punctuation removed as specified\n\n\n\n\n\n\n&gt;&gt;&gt; clean_text(\"Hello, it is so lovely to meet you today.\")\n\"hello it is so lovely to meet you today\"\n&gt;&gt;&gt; clean_text(\"Hello, it is so lovely to meet you today.\", pref_case=\"upper\", rm_all_punc=False, punctuation=[\",\", \"!\"])\n\"HELLO IT IS SO LOVELY TO MEET YOU TODAY.\"",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "clean_text"
+    ]
+  },
+  {
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique, case-sensitive words in a text string.\n\n\nword_chart",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  },
+  {
+    "objectID": "reference/index.html#text-parsing-functions",
+    "href": "reference/index.html#text-parsing-functions",
+    "title": "Function reference",
+    "section": "",
+    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique, case-sensitive words in a text string.\n\n\nword_chart",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
+  }
+]
