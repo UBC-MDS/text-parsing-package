@@ -1,0 +1,54 @@
+# word_chart { #text_parsing_package.word_chart }
+
+`word_chart`
+
+
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [word_chart](#text_parsing_package.word_chart.word_chart) | A sorted bar chart of words and their total counts. |
+
+### word_chart { #text_parsing_package.word_chart.word_chart }
+
+```python
+word_chart.word_chart(words, display_limit=10, display_order='descending')
+```
+
+A sorted bar chart of words and their total counts.
+
+This function takes in a dictionary of words and, along with their counts,
+produces a bar chart of either the most popular or least popular words.
+The user has the option of setting the number of words they would like to 
+include in the chart.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name          | Type                           | Description                                                                                                  | Default        |
+|---------------|--------------------------------|--------------------------------------------------------------------------------------------------------------|----------------|
+| words         | dict                           | A dictionary of words and their counts.                                                                      | _required_     |
+| display_limit | int                            | The number of words to include in the chart. If there are  less than 10 words present, all will be included. | `10`           |
+| display_order | (str, {ascending, descending}) | The option to look at the most popular (descending)  or least (ascending) popular words.                     | `"descending"` |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type                         | Description                                 |
+|--------|------------------------------|---------------------------------------------|
+|        | altair.vegalite.v5.api.Chart | A bar chart of most or least popular words. |
+
+#### Raises {.doc-section .doc-section-raises}
+
+| Name   | Type       | Description                                      |
+|--------|------------|--------------------------------------------------|
+|        | TypeError  | If the parameter(s) are not of the correct type. |
+|        | ValueError | If 'display_order' parameter is a valid option.  |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> word_dict = {"apple": 12, "river": 27, "cloud": 5, "stone": 19}
+>>> word_chart(word_dict)
+>>> word_chart(word_dict, display_limit=3, display_order="ascending")
+# An altair bar chart will be displayed.
+```

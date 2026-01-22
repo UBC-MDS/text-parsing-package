@@ -1,0 +1,46 @@
+# clean_text { #text_parsing_package.clean_text }
+
+`clean_text`
+
+A module cleans a string of text and parses it into a list of individual words
+
+## Functions
+
+| Name | Description |
+| --- | --- |
+| [clean_text](#text_parsing_package.clean_text.clean_text) | Cleans a string of text according to function arguments. |
+
+### clean_text { #text_parsing_package.clean_text.clean_text }
+
+```python
+clean_text.clean_text(text, pref_case='lower', rm_all_punc=True, punctuation=[])
+```
+
+Cleans a string of text according to function arguments.
+
+#### Parameters {.doc-section .doc-section-parameters}
+
+| Name        | Type                        | Description                                                                                                                                                    | Default    |
+|-------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|
+| text        | str                         | Any string of words, with or without punctuation.                                                                                                              | _required_ |
+| pref_case   | (str, {lower, upper, asis}) | The case to convert the string to. "asis" indicates that the type case should not be changed                                                                   | `"lower"`  |
+| rm_all_punc | bool                        | Indicates whether ALL punctuation should be removed from the string                                                                                            | `True`     |
+| punctuation | list                        | Only used if rm_all_punc is false, punctuation should be a list of specific punctuation to remove, all other punctuation will remain in the clean text string. | `[]`       |
+
+#### Returns {.doc-section .doc-section-returns}
+
+| Name   | Type   | Description                                                                                                                              |
+|--------|--------|------------------------------------------------------------------------------------------------------------------------------------------|
+|        | string | A cleaned string without whitespace other than spaces, coverted to a specific case if relevant and with punctuation removed as specified |
+
+#### Examples {.doc-section .doc-section-examples}
+
+```python
+>>> clean_text("Hello, it is so lovely to meet you today.")
+"hello it is so lovely to meet you today"
+```
+
+```python
+>>> clean_text("Hello, it is so lovely to meet you today.", pref_case="upper", rm_all_punc=False, punctuation=[",", "!"])
+"HELLO IT IS SO LOVELY TO MEET YOU TODAY."
+```

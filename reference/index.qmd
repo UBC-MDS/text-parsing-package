@@ -1,0 +1,11 @@
+# Function reference {.doc .doc-index}
+
+## Text Parsing Functions
+
+Functions to inspect docstrings.
+
+| | |
+| --- | --- |
+| [clean_text](clean_text.qmd#text_parsing_package.clean_text) | A module cleans a string of text and parses it into a list of individual words |
+| [count_unique_words](count_unique_words.qmd#text_parsing_package.count_unique_words) | Count the instances of unique, case-sensitive words in a text string. |
+| [word_chart](word_chart.qmd#text_parsing_package.word_chart) |  |
