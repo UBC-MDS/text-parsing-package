@@ -49,3 +49,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Changes Added by @rsokolsnyder
 - Add GitHub Action to run test suite
+- Add additional tests and exception handling for clean_text()

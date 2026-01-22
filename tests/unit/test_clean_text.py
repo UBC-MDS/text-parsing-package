@@ -45,7 +45,7 @@ def test_clean_text_whitespace():
 
 def test_clean_text_wrong_input():
     """
-    Tests exception handling for invalid inputs
+    Tests exception handling for invalid/unexpected inputs
     """
 
     with pytest.raises(TypeError):
@@ -53,3 +53,17 @@ def test_clean_text_wrong_input():
     
     with pytest.raises(ValueError):
         clean_text(good_string, pref_case="capitalize")
+    
+    with pytest.raises(TypeError):
+        clean_text(good_string, pref_case=123)
+    
+    with pytest.raises(TypeError):
+        clean_text(good_string, rm_all_punc=123)
+
+    with pytest.raises(TypeError):
+        clean_text(good_string, punctuation='.')
+    
+    empty = ""
+    actual = clean_text(empty)
+    expected = ""
+    assert actual == expected
