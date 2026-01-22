@@ -8,6 +8,10 @@ from text_parsing_package.count_words import count_unique_words
 import pytest
 
 def test_expected_input():
+    """
+    Test count_unique_words with a simple expected inputs.
+    """
+
     normal_input_example_1 = 'I go where I go'
     assert count_unique_words(normal_input_example_1) == {'I': 2, 'go': 2, 'where': 1}
 
@@ -33,6 +37,10 @@ def test_ignore_words_accepts_other_iterables():
     assert count_unique_words(text, ignore_words={'a'}) == {'b': 1}  # set works
 
 def test_unexpected_input():
+    """
+    Test count_unique_words with a simple unexpected inputs.
+    """
+
     # Empty string -> warning + {}
     with pytest.warns(UserWarning):
         assert count_unique_words('') == {}
@@ -57,7 +65,7 @@ def test_unexpected_input():
         count_unique_words('THE', case_sensitive=1)  # must be bool (int rejected)
 
 def test_punctuation_only_when_counting_punc():
-    text = "'!?.,:;"
+    text = "!'?.,:;"
     assert count_unique_words(text, count_punc=True) == {"'": 1,
         '!': 1, '?': 1, '.': 1, ',': 1, ':': 1, ';': 1
     }
