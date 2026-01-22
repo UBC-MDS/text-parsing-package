@@ -4,12 +4,6 @@ This test file aims to validate the output for this function given some expected
 input data and unexpected edge case input data.
 """
 
-"""
-Unit tests for the count_unique_words function in the count_unique_words module.
-This test file aims to validate the output for this function given some expected
-input data and unexpected edge case input data.
-"""
-
 from text_parsing_package.count_words import count_unique_words
 import pytest
 
