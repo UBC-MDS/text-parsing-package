@@ -13,7 +13,7 @@ requires = ["hatchling"]
 [project]
 name = "text_parsing_package"
 # You can chose to use dynamic versioning with hatch or static where you add it manually.
-version = "0.2.0"
+version = "0.2.1"
 
 description = """
 This package will contain 3 functions which facilitate the parsing and analysis of
