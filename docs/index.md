@@ -14,7 +14,7 @@ This is the landing page of your docs. you can update it as you'd like to.
 This documentation example uses myst markdown as the primary documentation syntax.
 
 
-:::{button-link} <https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html>
+:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html
 :color: primary
 :class: sd-rounded-pill float-left
 
