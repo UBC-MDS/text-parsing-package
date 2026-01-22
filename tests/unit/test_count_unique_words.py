@@ -57,8 +57,8 @@ def test_unexpected_input():
         count_unique_words('THE', case_sensitive=1)  # must be bool (int rejected)
 
 def test_punctuation_only_when_counting_punc():
-    text = "!?.,:;"
-    assert count_unique_words(text, count_punc=True) == {
+    text = "'!?.,:;"
+    assert count_unique_words(text, count_punc=True) == {"'": 1,
         '!': 1, '?': 1, '.': 1, ',': 1, ':': 1, ';': 1
     }
 
