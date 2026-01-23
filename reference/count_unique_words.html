@@ -200,16 +200,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="text_parsing_package.count_unique_words" class="level1">
 <h1>count_unique_words</h1>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>count_unique_words(text, ignore_words<span class="op">=</span><span class="va">None</span>, count_punc<span class="op">=</span><span class="va">False</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Count the instances of unique, case-sensitive words in a text string.</p>
-<p>Input text is assumed to be separated by single spaces and punctuation has been removed. Additional pre-processing is required for correct word parsing and counting if the input text words are not separated by single spaces and/or the text contains punctuation.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>count_unique_words(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    text,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    ignore_words<span class="op">=</span><span class="va">None</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    count_punc<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    case_sensitive<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Count the instances of unique words in a text string.</p>
+<p>By default, punctuation is removed (except apostrophes inside words). Words are split on any whitespace (spaces/tabs/newlines), not just single spaces.</p>
 <section id="parameters" class="level2 doc-section doc-section-parameters">
 <h2 class="doc-section doc-section-parameters anchored" data-anchor-id="parameters">Parameters</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 78%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 73%">
 <col style="width: 6%">
 </colgroup>
 <thead>
@@ -224,50 +229,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="odd">
 <td>text</td>
 <td>str</td>
-<td>string of text to count instances of case sensitive unique words.</td>
+<td>String of text to count instances of unique words.</td>
 <td><em>required</em></td>
 </tr>
 <tr class="even">
 <td>ignore_words</td>
-<td>list[str]</td>
-<td>list of strings of words to exclude from the counting, by default all unique words are included.</td>
+<td>Iterable[str] | None</td>
+<td>Words to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple). Matching respects <code>case_sensitive</code>.</td>
 <td><code>None</code></td>
 </tr>
 <tr class="odd">
 <td>count_punc</td>
 <td>bool</td>
-<td>option to count the instances of unique punctuation in the input text string if set to True, otherwise all punctuation is removed by default.</td>
+<td>If True, punctuation symbols are tokenized and counted as separate tokens. If False, punctuation is removed (apostrophes inside words are kept).</td>
 <td><code>False</code></td>
+</tr>
+<tr class="even">
+<td>case_sensitive</td>
+<td>bool</td>
+<td>If False, words are normalized to lowercase before counting (and ignore_words is too).</td>
+<td><code>True</code></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="returns" class="level2 doc-section doc-section-returns">
 <h2 class="doc-section doc-section-returns anchored" data-anchor-id="returns">Returns</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 8%">
-<col style="width: 72%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>word_count_dict</td>
-<td>dict</td>
-<td>A dictionary of words as str keys and their counts as int values</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="raises" class="level2 doc-section doc-section-raises">
-<h2 class="doc-section doc-section-raises anchored" data-anchor-id="raises">Raises</h2>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -279,18 +266,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td></td>
+<td>dict[str, int]</td>
+<td>Dictionary of tokens to counts.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="raises" class="level2 doc-section doc-section-raises">
+<h2 class="doc-section doc-section-raises anchored" data-anchor-id="raises">Raises</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
 <td>TypeError</td>
-<td>If input type is incorrect.</td>
+<td>If input types are incorrect or ignore_words contains non-strings.</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="examples" class="level2 doc-section doc-section-examples">
 <h2 class="doc-section doc-section-examples anchored" data-anchor-id="examples">Examples</h2>
-<p>word_count_dict = count_unique_words(‘I go where I go’)</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">'I'</span>: <span class="dv">2</span>, <span class="st">'go'</span>: <span class="dv">2</span>, where: <span class="dv">1</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>word_count_dict = count_unique_words(‘The the the thing’, ignore_words = [‘the’])</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> {<span class="st">'thing'</span>: <span class="dv">1</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>count_unique_words(‘I go where I go’) {‘I’: 2, ‘go’: 2, ‘where’: 1}</p>
+<p>count_unique_words(‘The the the thing’, ignore_words=[‘the’], case_sensitive=False) {‘thing’: 1}</p>
 
 
 </section>
