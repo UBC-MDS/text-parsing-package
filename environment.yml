@@ -1,0 +1,5 @@
+name: text_parsing
+channels:
+  - conda-forge
+dependencies:
+  - python
