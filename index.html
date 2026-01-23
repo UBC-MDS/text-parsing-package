@@ -133,6 +133,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="./reference/index.html"> 
 <span class="menu-text">Reference</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./docs/about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -153,54 +157,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="text-parsing-package" class="level1">
 <h1>Text Parsing Package</h1>
-<section id="contributors" class="level2">
-<h2 class="anchored" data-anchor-id="contributors">Contributors:</h2>
-<ul>
-<li>Jacob Cann (<span class="citation" data-cites="Jacob-F-Cann">@Jacob-F-Cann</span>)</li>
-<li>Rebecca Sokol-Snyder (<span class="citation" data-cites="rsokolsnyder">@rsokolsnyder</span>)</li>
-<li>Wes Beard (<span class="citation" data-cites="beardw">@beardw</span>)</li>
-</ul>
-</section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
-<p>The following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand what the text data they are working with looks like.</p>
-<p>Since processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices.</p>
-<p>Ease of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in <em>Relation to Existing Package Ecosystem</em> below).</p>
-<p>The functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether.</p>
+<p>This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our <a href="./docs/about.html">About</a> page.</p>
 </section>
-<section id="package-functions" class="level2">
-<h2 class="anchored" data-anchor-id="package-functions">Package Functions</h2>
-<ol type="1">
-<li><p>A function to clean/preprocess a block of input text data.</p>
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
 <ul>
-<li>The function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.</li>
-<li>Options for how the text block shall be processed will be included in the function as optional arguments.</li>
-<li>The function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.</li>
-</ul></li>
-<li><p>A function to count the number instances of unique words in a block of cleaned input text data.</p>
+<li><code>clean_text()</code>
 <ul>
-<li>The function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.</li>
-<li>Optional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.</li>
-<li>The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.</li>
+<li>removes punctuation and set all words to lower case for easier analysis</li>
 </ul></li>
-<li><p>A function to visualize the top counts or frequencies of occurrence of the words within the input text.</p>
+<li><code>count_unique_words()</code>
 <ul>
-<li>The function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.</li>
-<li>Optional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.</li>
-<li>The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.</li>
+<li>counts the number instances of unique words in a block of cleaned input text data</li>
 </ul></li>
-</ol>
-</section>
-<section id="set-up-the-development-environment-environment.yml" class="level2">
-<h2 class="anchored" data-anchor-id="set-up-the-development-environment-environment.yml">set up the development environment (environment.yml)</h2>
+<li><code>word_chart()</code>
+<ul>
+<li>visualize the top counts of the words within the input in the form of a bar chart</li>
+</ul></li>
+</ul>
 </section>
 <section id="installation" class="level2">
 <h2 class="anchored" data-anchor-id="installation">Installation</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install text_parsing_package</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol type="1">
+<li>To install this package, navigate to your preferred environment.</li>
+<li>Run the following command in your terminal.</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-i</span> https://test.pypi.org/simple/ text-parsing-package</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="usage" class="level2">
 <h2 class="anchored" data-anchor-id="usage">Usage</h2>
-<p>The <code>text_parsing_package</code> is used to clean text, count the words, and plot the results on a bar chart.</p>
+<p>Below are examples of how the <code>text_parsing_package</code> can be used to clean text, count the words, and plot the results onto a bar chart.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_parsing_package.clean_text <span class="im">import</span> clean_text</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_parsing_package.count_words <span class="im">import</span> count_unique_words</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> text_parsing_package.word_chart <span class="im">import</span> word_chart</span>
@@ -211,70 +199,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>bar_fig <span class="op">=</span> word_chart(text_count)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>bar_fig <span class="co"># output an altair bar plot</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="run-tests" class="level2">
-<h2 class="anchored" data-anchor-id="run-tests">Run Tests</h2>
-<p>To run the test suite, following these steps:</p>
+<section id="contributing" class="level2">
+<h2 class="anchored" data-anchor-id="contributing">Contributing</h2>
+<p>To contribute to this project, check out <a href="./CONTRIBUTING.html">Contributing</a>.</p>
+<p>If you would like to run the tests, and, build and deploy documentation, read below.</p>
+<section id="clone-repository-and-install-package-with-development-dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="clone-repository-and-install-package-with-development-dependencies">Clone Repository and Install Package with Development Dependencies</h3>
 <ol type="1">
-<li>Ensure you have the development environment installed and activated.</li>
-<li>Enter the following command in your terminal.</li>
+<li>Clone this repository and activate the environment.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install text_parsing_package <span class="at">-e</span> .<span class="pp">[</span><span class="ss">tests</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="3" type="1">
-<li>Once the package has installed with test package requirements, run the following command in your terminal.</li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>this_repo<span class="op">&gt;</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env create <span class="at">-n</span> text_parsing <span class="at">-f</span> environment.yml</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate text_parsing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li>Navigate to the root of the project directory and install package with dependencies.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pytest</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="4" type="1">
-<li>Test(s) success and/or failure will be output to the terminal.</li>
-</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-e.</span> <span class="pp">[</span><span class="ss">test,dev,docs</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="build-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="build-documentation">Build Documentation</h2>
-<p>To build the documentation, follow the following steps:</p>
+<section id="run-tests" class="level3">
+<h3 class="anchored" data-anchor-id="run-tests">Run Tests</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pytest</span> <span class="at">--cov</span><span class="op">=</span>src <span class="at">--cov-branch</span> <span class="at">--cov-report</span><span class="op">=</span>term-missing</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="build-preview-and-deploy-the-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="build-preview-and-deploy-the-documentation">Build, Preview, and Deploy the Documentation</h3>
 <ol type="1">
-<li>Ensure you have the development environment installed and activated.</li>
-<li>Enter the following command in your terminal.</li>
+<li>Build and preview the documentation.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install text_parsing_package <span class="at">-e</span> .<span class="pp">[</span><span class="ss">docs</span><span class="pp">]</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="3" type="1">
-<li>Once the package has been loaded with the appropriate dependencies, run the following command in your terminal:</li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quartodoc</span> build</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li>To update the documentation website.</li>
 </ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quartodoc build</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="4" type="1">
-<li>To preview the documentation, run this command:</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> quarto preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="deploy-documentation-automated" class="level2">
-<h2 class="anchored" data-anchor-id="deploy-documentation-automated">Deploy Documentation (automated)</h2>
 </section>
 <section id="relation-to-existing-package-ecosystem" class="level2">
 <h2 class="anchored" data-anchor-id="relation-to-existing-package-ecosystem">Relation to Existing Package Ecosystem</h2>
-<p>There exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example, the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package.</p>
-<p>Similarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):</p>
-<section id="package-examples" class="level3">
-<h3 class="anchored" data-anchor-id="package-examples">Package Examples</h3>
-<section id="text-visualization" class="level4">
-<h4 class="anchored" data-anchor-id="text-visualization">Text visualization</h4>
-<ol type="1">
-<li><a href="https://pypi.org/project/wordcloud/">WordCloud</a></li>
-<li><a href="https://pypi.org/project/scattertext/">Scattertext</a></li>
-</ol>
+<p>Refer to our <a href="./docs/about.html">About</a> page.</p>
 </section>
-<section id="text-cleaningpreprocessing" class="level4">
-<h4 class="anchored" data-anchor-id="text-cleaningpreprocessing">Text cleaning/preprocessing</h4>
-<ol type="1">
-<li><a href="https://pypi.org/project/cleantext/">CleanText</a></li>
-<li><a href="https://pypi.org/project/clean-text/">clean-text</a></li>
-</ol>
-</section>
-<section id="text-analysis" class="level4">
-<h4 class="anchored" data-anchor-id="text-analysis">Text analysis</h4>
-<ol type="1">
-<li><a href="https://pypi.org/project/nltk/">NLTK</a></li>
-<li><a href="https://pypi.org/project/spacy/">spaCy</a></li>
-</ol>
-</section>
-</section>
+<section id="contributors" class="level2">
+<h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
+<ul>
+<li>Jacob Cann (<span class="citation" data-cites="Jacob-F-Cann">@Jacob-F-Cann</span>)</li>
+<li>Rebecca Sokol-Snyder (<span class="citation" data-cites="rsokolsnyder">@rsokolsnyder</span>)</li>
+<li>Wes Beard (<span class="citation" data-cites="beardw">@beardw</span>)</li>
+</ul>
 <section id="license" class="level3">
 <h3 class="anchored" data-anchor-id="license">License</h3>
 <p>The software code contained within this repository is licensed under the <a href="https://spdx.org/licenses/MIT.html">MIT license</a>. See the license file for more information.</p>
