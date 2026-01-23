@@ -1,5 +1,222 @@
 [
   {
+    "objectID": "reference/count_unique_words.html",
+    "href": "reference/count_unique_words.html",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "count_unique_words(\n    text,\n    ignore_words=None,\n    count_punc=False,\n    case_sensitive=True,\n)\nCount the instances of unique words in a text string.\nBy default, punctuation is removed (except apostrophes inside words). Words are split on any whitespace (spaces/tabs/newlines), not just single spaces.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nString of text to count instances of unique words.\nrequired\n\n\nignore_words\nIterable[str] | None\nWords to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple). Matching respects case_sensitive.\nNone\n\n\ncount_punc\nbool\nIf True, punctuation symbols are tokenized and counted as separate tokens. If False, punctuation is removed (apostrophes inside words are kept).\nFalse\n\n\ncase_sensitive\nbool\nIf False, words are normalized to lowercase before counting (and ignore_words is too).\nTrue\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\ndict[str, int]\nDictionary of tokens to counts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input types are incorrect or ignore_words contains non-strings.\n\n\n\n\n\n\ncount_unique_words(‘I go where I go’) {‘I’: 2, ‘go’: 2, ‘where’: 1}\ncount_unique_words(‘The the the thing’, ignore_words=[‘the’], case_sensitive=False) {‘thing’: 1}",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#parameters",
+    "href": "reference/count_unique_words.html#parameters",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nString of text to count instances of unique words.\nrequired\n\n\nignore_words\nIterable[str] | None\nWords to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple). Matching respects case_sensitive.\nNone\n\n\ncount_punc\nbool\nIf True, punctuation symbols are tokenized and counted as separate tokens. If False, punctuation is removed (apostrophes inside words are kept).\nFalse\n\n\ncase_sensitive\nbool\nIf False, words are normalized to lowercase before counting (and ignore_words is too).\nTrue",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#returns",
+    "href": "reference/count_unique_words.html#returns",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\ndict[str, int]\nDictionary of tokens to counts.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#raises",
+    "href": "reference/count_unique_words.html#raises",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf input types are incorrect or ignore_words contains non-strings.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/count_unique_words.html#examples",
+    "href": "reference/count_unique_words.html#examples",
+    "title": "count_unique_words",
+    "section": "",
+    "text": "count_unique_words(‘I go where I go’) {‘I’: 2, ‘go’: 2, ‘where’: 1}\ncount_unique_words(‘The the the thing’, ignore_words=[‘the’], case_sensitive=False) {‘thing’: 1}",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "count_unique_words"
+    ]
+  },
+  {
+    "objectID": "reference/word_chart.html",
+    "href": "reference/word_chart.html",
+    "title": "word_chart",
+    "section": "",
+    "text": "word_chart\n\n\n\n\n\nName\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "word_chart"
+    ]
+  },
+  {
+    "objectID": "reference/word_chart.html#functions",
+    "href": "reference/word_chart.html#functions",
+    "title": "word_chart",
+    "section": "",
+    "text": "Name\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
+    "crumbs": [
+      "Reference",
+      "Text Parsing Functions",
+      "word_chart"
+    ]
+  },
+  {
+    "objectID": "DEVELOPMENT.html",
+    "href": "DEVELOPMENT.html",
+    "title": "Development Guide",
+    "section": "",
+    "text": "Welcome to your shiny new package. This page will help you get started with using Hatch to manage your package.\nIf you look at your project, you will see that a pyproject.toml file. This file stores both your package configuration and settings for development tools like Hatch that you will use to work on your package.\nThis file is written using a .toml format. You can learn more about toml here. Here’s the TL&DR:\n\nEach [] section in the toml file is called a table.\nYou can nest tables with double brackets like this[[]]\nTables contain information about a element that you want to configure.\n\nWe are using Hatch as the default packaging tool. Hatch allows you to configure and run environments and scripts similar to workflow tools like tox or nox.\nHach, by default, uses virtual environments (venv) to manage environments. But you can configure it to use other environment tools.Read the hatch documentation to learn more about environments.\nFor this template, we have set up Hatch environments for you to use. At the bottom of your pyproject.toml file, notice a hatch environment section that looks like this:\n########################################\n# Hatch Environments\n########################################\nBelow is the Hatch environment to install your package. Notice that it defines pip and twine as two packages that the environment needs.\n[tool.hatch.envs.build]\ndescription = \"\"\"Test the installation the package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\nThe table below defines the scripts that you will run build and check your package.\n[tool.hatch.envs.build.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\ndetached = true\nYou can enter that environment to check it out:\n$ hatch shell build\nIf you run pip list, in the environment, twine will be there:\n$ pip list\nHatch by default, installs your package in editable mode (-e) into its virtual environments. But if detached=True is set, then it will skip installing your package into the virtual enviornment.\n\n\nBelow you see the Hatch environment test table.\ntool.hatch.envs says, “Hey, Hatch, this is the definition for an environment.” test is the name of the environment.\nThe environment below defines the dependencies that Hatch needs to install into the environment named test.\n[tool.hatch.envs.test]\ndescription = \"\"\"Run the test suite.\"\"\"\ndependencies = [\n    \"pytest\",\n    \"pytest-cov\",\n    \"pytest-raises\",\n    \"pytest-randomly\",\n    \"pytest-xdist\",\n]\nTo enter a Hatch environment use:\nhatch shell environmentname\nSo you can enter the test environment above with:\nhatch shell test\n\n\n\nIf the environment has a matrix associated with it, that tells Hatch to run the test scripts across different Python versions.\n[[tool.hatch.envs.test.matrix]]\npython = [\"3.10\", \"3.11\", \"3.12\", \"3.13\"]\nIf you run hatch shell test, you will see the output below. To enter an environment with a matrix attached to it, you need to pick the Python environment version that you want to open.\n$ hatch shell test                           \nEnvironment `test` defines a matrix, choose one of the following instead:\n\ntest.py3.10\ntest.py3.11\ntest.py3.12\ntest.py3.13\nOpen the Python 3.13 environment like this:\n$ hatch shell test.py3.13\nTo leave an environment use:\n$ deactivate\n\n\n\nIn the tests section of your pyproject.toml, you will see a tool.hatch.envs.test.scripts table.\nThis table defines the commands that you want Hatch to run in the test environment. Notice that the script has one command called run.\n[tool.hatch.envs.test.scripts]\nrun = \"pytest {args:--cov=greatproject --cov-report=term-missing}\"\nTo run this script , use:\nhatch run test:run\n\nhatch run: calls Hatch and tells it that it will be running a command\ntest:run: defines the environment you want it to run (test) and defines the name of the “script” to berun.\n\nIf you have a Hatch matrix setup for tests, it will both install the necessary Python version using UV and run your tests on each version of the Python versions that you declare in the matrix table. In this case, there are 4 Python versions in the environment, so your tests will run 4 times, once in each Python version listed in the matrix table.\n@lwasser ➜ /workspaces/pyopensci-scipy25-create-python-package (main) $ hatch run test:run\n──────────────────────────────────────────────────────────────────────── test.py3.10 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.10.16, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1490740387\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.10.16-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n──────────────────────────────────────────────────────────────────────── test.py3.11 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.11.12, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1596865075\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.11.12-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n\n\n\nYou can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "DEVELOPMENT.html#build-your-package",
+    "href": "DEVELOPMENT.html#build-your-package",
+    "title": "Development Guide",
+    "section": "",
+    "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our About page.\n\n\n\n\nclean_text()\n\nremoves punctuation and set all words to lower case for easier analysis\n\ncount_unique_words()\n\ncounts the number instances of unique words in a block of cleaned input text data\n\nword_chart()\n\nvisualize the top counts of the words within the input in the form of a bar chart\n\n\n\n\n\n\nTo install this package, navigate to your preferred environment.\nRun the following command in your terminal.\n\npip install -i https://test.pypi.org/simple/ text-parsing-package\n\n\n\nBelow are examples of how the text_parsing_package can be used to clean text, count the words, and plot the results onto a bar chart.\nfrom text_parsing_package.clean_text import clean_text\nfrom text_parsing_package.count_words import count_unique_words\nfrom text_parsing_package.word_chart import word_chart\n\ntext = \"The quick brown fox jumped over the fence.\"\ntext_clean = clean_text(text)\ntext_count = count_unique_words(text_clean)\nbar_fig = word_chart(text_count)\nbar_fig # output an altair bar plot\n\n\n\nTo contribute to this project, check out Contributing.\nIf you would like to run the tests, and, build and deploy documentation, read below.\n\n\n\nClone this repository and activate the environment.\n\ngit clone &lt;this_repo&gt; \nconda env create -n text_parsing -f environment.yml\nconda activate text_parsing\n\nNavigate to the root of the project directory and install package with dependencies.\n\npip install -e. [test,dev,docs]\n\n\n\npytest --cov=src --cov-branch --cov-report=term-missing\n\n\n\n\nBuild and preview the documentation.\n\nquartodoc build\nquarto preview\n\nTo update the documentation website.\n\nquarto publish gh-pages\n\n\n\n\nRefer to our About page.\n\n\n\n\nJacob Cann (@Jacob-F-Cann)\nRebecca Sokol-Snyder (@rsokolsnyder)\nWes Beard (@beardw)\n\n\n\nThe software code contained within this repository is licensed under the MIT license. See the license file for more information."
+  },
+  {
+    "objectID": "index.html#summary",
+    "href": "index.html#summary",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our About page."
+  },
+  {
+    "objectID": "index.html#functions",
+    "href": "index.html#functions",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "clean_text()\n\nremoves punctuation and set all words to lower case for easier analysis\n\ncount_unique_words()\n\ncounts the number instances of unique words in a block of cleaned input text data\n\nword_chart()\n\nvisualize the top counts of the words within the input in the form of a bar chart"
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "To install this package, navigate to your preferred environment.\nRun the following command in your terminal.\n\npip install -i https://test.pypi.org/simple/ text-parsing-package"
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "Below are examples of how the text_parsing_package can be used to clean text, count the words, and plot the results onto a bar chart.\nfrom text_parsing_package.clean_text import clean_text\nfrom text_parsing_package.count_words import count_unique_words\nfrom text_parsing_package.word_chart import word_chart\n\ntext = \"The quick brown fox jumped over the fence.\"\ntext_clean = clean_text(text)\ntext_count = count_unique_words(text_clean)\nbar_fig = word_chart(text_count)\nbar_fig # output an altair bar plot"
+  },
+  {
+    "objectID": "index.html#contributing",
+    "href": "index.html#contributing",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "To contribute to this project, check out Contributing.\nIf you would like to run the tests, and, build and deploy documentation, read below.\n\n\n\nClone this repository and activate the environment.\n\ngit clone &lt;this_repo&gt; \nconda env create -n text_parsing -f environment.yml\nconda activate text_parsing\n\nNavigate to the root of the project directory and install package with dependencies.\n\npip install -e. [test,dev,docs]\n\n\n\npytest --cov=src --cov-branch --cov-report=term-missing\n\n\n\n\nBuild and preview the documentation.\n\nquartodoc build\nquarto preview\n\nTo update the documentation website.\n\nquarto publish gh-pages"
+  },
+  {
+    "objectID": "index.html#relation-to-existing-package-ecosystem",
+    "href": "index.html#relation-to-existing-package-ecosystem",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "Refer to our About page."
+  },
+  {
+    "objectID": "index.html#contributors",
+    "href": "index.html#contributors",
+    "title": "Text Parsing Package",
+    "section": "",
+    "text": "Jacob Cann (@Jacob-F-Cann)\nRebecca Sokol-Snyder (@rsokolsnyder)\nWes Beard (@beardw)\n\n\n\nThe software code contained within this repository is licensed under the MIT license. See the license file for more information."
+  },
+  {
+    "objectID": "docs/about.html",
+    "href": "docs/about.html",
+    "title": "About this Package",
+    "section": "",
+    "text": "Since processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices.\nEase of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in Relation to Existing Package Ecosystem below).\nThe functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether.\n\nA function to clean/preprocess a block of input text data.\n\nThe function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.\nOptions for how the text block shall be processed will be included in the function as optional arguments.\nThe function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.\n\nA function to count the number instances of unique words in a block of cleaned input text data.\n\nThe function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.\nOptional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.\n\nA function to visualize the top counts or frequencies of occurrence of the words within the input text.\n\nThe function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.\nOptional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.\n\nThere exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example, the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package.\n\nSimilarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):\n\nPackage Examples\n\nText visualization\n\nWordCloud\nScattertext\n\n\n\nText cleaning/preprocessing\n\nCleanText\nclean-text\n\n\n\nText analysis\n\nNLTK\nspaCy"
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nFirst release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals.\n\n\n\n\n\n\nSecond release\n\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml\n\n\n\n\n\n\nThird release\n\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAdd additional tests and exception handling for clean_text()\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
+  },
+  {
+    "objectID": "CHANGELOG.html#section",
+    "href": "CHANGELOG.html#section",
+    "title": "Changelog",
+    "section": "",
+    "text": "First release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals."
+  },
+  {
+    "objectID": "CHANGELOG.html#section-1",
+    "href": "CHANGELOG.html#section-1",
+    "title": "Changelog",
+    "section": "",
+    "text": "Second release"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
+    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
+    "title": "Changelog",
+    "section": "",
+    "text": "Write the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml"
+  },
+  {
+    "objectID": "CHANGELOG.html#section-2",
+    "href": "CHANGELOG.html#section-2",
+    "title": "Changelog",
+    "section": "",
+    "text": "Third release"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
+    "href": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
+    "title": "Changelog",
+    "section": "",
+    "text": "Add GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-2",
+    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-2",
+    "title": "Changelog",
+    "section": "",
+    "text": "Add GitHub Action to deploy the package to Test PyPI\nAdd additional tests and exception handling for clean_text()\nAdd additional tests and exception handling for clean_text()"
+  },
+  {
+    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-3",
+    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-3",
+    "title": "Changelog",
+    "section": "",
+    "text": "Add GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
+  },
+  {
     "objectID": "CODE_OF_CONDUCT.html",
     "href": "CODE_OF_CONDUCT.html",
     "title": "Contributor Covenant Code of Conduct",
@@ -63,86 +280,25 @@
     "text": "524 W3 M3 ChatGPT Prompt (5.2 model, default settings)\nSource: https://chatgpt.com/ - OpenAI\nPrompt for count_unique_words function and tests improvements:\n— Start ChatGPT Prompt Input\nImprove this function specification by handling errors more efficiently or explicitly, improving functionality or options and adding corresponding simple unit tests to validate the changes. Explain each change and why it was made. Make the changes simple and easy to follow, do not rebuild the function from the ground-up.\nHere is the function specification:\n\"\"\"\nA module containing the count_unique_words function for general use or in\nconjunction with other modules in the text parsing package. This module aids\nin numerically analyzing the frequency of unique words in a section of text.\n\"\"\"\n\n# Import Counter, re and warnings from base python package\nfrom collections import Counter\nimport warnings\nimport re\n\ndef count_unique_words(text: str, ignore_words: list[str] = None, count_punc: bool = False) -&gt; dict[str, int]:\n\"\"\"\nCount the instances of unique, case-sensitive words in a text string.\n\nInput text is assumed to be separated by single spaces and punctuation\nhas been removed. Additional pre-processing is required for correct word\nparsing and counting if the input text words are not separated by single\nspaces and/or the text contains punctuation.\n\nParameters\n----------\ntext : str\nstring of text to count instances of case sensitive unique words.\n\nignore_words: list[str], default=None\nlist of strings of words to exclude from the counting, by default all unique words are included.\n\ncount_punc: bool, default=False\noption to count the instances of unique punctuation in the input text string if set to True,\notherwise all punctuation is removed by default.\n\nReturns\n-------\nword_count_dict: dict\nA dictionary of words as str keys and their counts as int values\n\nRaises\n------\nTypeError\nIf input type is incorrect.\n\nExamples\n--------\nword_count_dict = count_unique_words('I go where I go')\n&gt;&gt;&gt; {'I': 2, 'go': 2, where: 1}\n\nword_count_dict = count_unique_words('The the the thing', ignore_words = ['the'])\n&gt;&gt;&gt; {'thing': 1}\n\n\"\"\"\n\n# Check the input type for the text parameter is a string\nif not isinstance(text, str):\nraise TypeError(f'\"text\" parameter must be a str, not a {type(text)}.')\n\n# Check the input type for the ignore_words parameter is a list[str] or None\nif ignore_words is not None and not isinstance(ignore_words, list):\nraise TypeError(f'\"ignore_words\" parameter must be a list[str] | None, not a {type(ignore_words)}.')\n\n# Check the input type for the count_punc parameter is a string\nif not isinstance(count_punc, bool):\nraise TypeError(f'\"count_punc\" parameter must be a bool, not a {type(count_punc)}.')\n\n# If the passed string is empty return and empty dict and warn the user\nif len(text)==0:\nword_count_dict = {}\nwarnings.warn(f'You passed \"{text}\" as a string, returning an empty word_count_dict.')\nreturn word_count_dict\n\n# Remove punctuation unless user explicitly wants unique punctuation instances to be counted\nif not count_punc:\n# Remove all punctuation if the default value for count_punc is used\ntext = re.sub(r\"[^\\w\\s']\", '', text)\nelse:\n# Extra spaces added to any matched punctuation to be counted for the split below\ntext = re.sub(r\"[^\\w\\s']\", r' \\g&lt;0&gt;', text)\n\n# assume a new word occurs on a space, if not use the clean_text function first\nwords_list = text.split(' ')\n\n# built-in function to count repeated strings in a list this instead of building \n# from scratch which may result in have bad time complexity\nword_count_dict = dict(Counter(words_list))\n\n# If ignore_words is passed as non-empty list[str], remove these keys from the dict\nif ignore_words!=None and len(ignore_words)&gt;0:\nfor word in ignore_words:\nword_count_dict.pop(word, None)\n\n# Remove any empty space keys if they exist from punctuation counting\nword_count_dict.pop('', None)\n\nreturn word_count_dict\nHere is the testing file to be run with pytest:\n\"\"\"\nUnit tests for the count_unique_words function in the count_unique_words module.\nThis test file aims to validate the output for this function given some expected \ninput data and unexpected edge case input data.\n\"\"\"\n\n# Import the count_unique_words function from the count_words module in the package\nfrom text_parsing_package.count_words import count_unique_words\nimport pytest\n\ndef test_expected_input():\n\"\"\"\nTest count_unique_words with a simple expected inputs.\n\"\"\"\n\nnormal_input_example_1 = 'I go where I go'\nassert count_unique_words(normal_input_example_1) == {'I': 2, 'go': 2, 'where': 1}\n\nnormal_input_example_2 = 'the the the thing'\nassert count_unique_words(normal_input_example_2, ignore_words=['the']) == {'thing': 1}\n\nnormal_input_example_3 = \"I'll be home soon!\"\nassert count_unique_words(normal_input_example_3, count_punc=True) == {\"I'll\": 1, 'be': 1, 'home': 1, 'soon': 1, '!': 1}\n\ndef test_unexpected_input():\n\"\"\"\nTest count_unique_words with a simple unexpected inputs.\n\"\"\"\n\n# This should raise a warning to the user that an empty dict is returned\nwith pytest.warns(UserWarning):\nabnormal_input_example_1 = ''\nassert count_unique_words(abnormal_input_example_1) == {}\n\nwith pytest.raises(TypeError):\nabnormal_input_example_2 = 1\ncount_unique_words(abnormal_input_example_2)\n\nwith pytest.raises(TypeError):\nabnormal_input_example_3 = 'THE'\ncount_unique_words(abnormal_input_example_3, ignore_words=1)\n\nwith pytest.raises(TypeError):\nabnormal_input_example_3 = 'THE'\ncount_unique_words(abnormal_input_example_3, count_punc=1)\n\nabnormal_input_example_4 = \"!?.,:;\"\nassert count_unique_words(abnormal_input_example_4, count_punc=True) == {'!':1, '?':1, '.':1, ',':1, ':':1, ';':1}\n— End ChatGPT Prompt Input\n— Start ChatGPT Output\nBelow is a small, incremental set of changes that keeps the function’s structure, but makes it more robust, clearer about behavior, and easier to use on “real” text. I also included simple pytest unit tests that validate each change.\nUpdated function (minimal refactor, better validation + options)\nfrom collections import Counter\nimport warnings\nimport re\nfrom typing import Iterable, Optional\n\ndef count_unique_words(\n    text: str,\n    ignore_words: Optional[Iterable[str]] = None,\n    count_punc: bool = False,\n    case_sensitive: bool = True,\n) -&gt; dict[str, int]:\n    \"\"\"\n    Count the instances of unique words in a text string.\n\n    By default, punctuation is removed (except apostrophes inside words).\n    Words are split on any whitespace (spaces/tabs/newlines), not just single spaces.\n\n    Parameters\n    ----------\n    text : str\n        String of text to count instances of unique words.\n\n    ignore_words : Iterable[str] | None, default=None\n        Words to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple).\n        Matching respects `case_sensitive`.\n\n    count_punc : bool, default=False\n        If True, punctuation symbols are tokenized and counted as separate tokens.\n        If False, punctuation is removed (apostrophes inside words are kept).\n\n    case_sensitive : bool, default=True\n        If False, words are normalized to lowercase before counting (and ignore_words is too).\n\n    Returns\n    -------\n    dict[str, int]\n        Dictionary of tokens to counts.\n\n    Raises\n    ------\n    TypeError\n        If input types are incorrect or ignore_words contains non-strings.\n\n    Examples\n    --------\n    count_unique_words('I go where I go')\n    {'I': 2, 'go': 2, 'where': 1}\n\n    count_unique_words('The the the thing', ignore_words=['the'], case_sensitive=False)\n    {'thing': 1}\n    \"\"\"\n\n    # Validate types\n    if not isinstance(text, str):\n        raise TypeError(f'\"text\" parameter must be a str, not a {type(text)}.')\n\n    if not isinstance(count_punc, bool):\n        raise TypeError(f'\"count_punc\" parameter must be a bool, not a {type(count_punc)}.')\n\n    if not isinstance(case_sensitive, bool):\n        raise TypeError(f'\"case_sensitive\" parameter must be a bool, not a {type(case_sensitive)}.')\n\n    if ignore_words is not None:\n        # Allow any iterable of strings (list/set/tuple/etc.), but reject non-iterables like int\n        if isinstance(ignore_words, (str, bytes)) or not isinstance(ignore_words, Iterable):\n            raise TypeError(f'\"ignore_words\" parameter must be an iterable of str | None, not a {type(ignore_words)}.')\n        for w in ignore_words:\n            if not isinstance(w, str):\n                raise TypeError('\"ignore_words\" must contain only strings.')\n\n    # Treat empty OR whitespace-only as empty input\n    if text.strip() == \"\":\n        warnings.warn('You passed an empty/whitespace-only string; returning an empty dict.')\n        return {}\n\n    # Normalize case if requested\n    if not case_sensitive:\n        text = text.lower()\n\n    # Tokenize punctuation if requested; otherwise remove punctuation\n    if count_punc:\n        # Put spaces around punctuation so it becomes its own token\n        # Keep apostrophes as part of words (e.g., \"I'll\")\n        text = re.sub(r\"([^\\w\\s'])\", r\" \\1 \", text)\n    else:\n        # Remove punctuation, but keep apostrophes (inside contractions/possessives)\n        text = re.sub(r\"[^\\w\\s']\", \"\", text)\n\n    # Split on any whitespace (handles multiple spaces, tabs, newlines) and avoids '' tokens\n    words_list = text.split()\n\n    # Normalize ignore list to a set for efficient filtering\n    ignore_set: set[str] = set()\n    if ignore_words:\n        ignore_set = {w if case_sensitive else w.lower() for w in ignore_words}\n\n    # Filter ignored words before counting (avoids counting then popping)\n    filtered = (w for w in words_list if w and w not in ignore_set)\n\n    return dict(Counter(filtered))\nUpdated pytest file (adds tests for the new behavior)\n\"\"\"\nUnit tests for the count_unique_words function in the count_unique_words module.\nThis test file aims to validate the output for this function given some expected\ninput data and unexpected edge case input data.\n\"\"\"\n\nfrom text_parsing_package.count_words import count_unique_words\nimport pytest\n\ndef test_expected_input():\n    normal_input_example_1 = 'I go where I go'\n    assert count_unique_words(normal_input_example_1) == {'I': 2, 'go': 2, 'where': 1}\n\n    normal_input_example_2 = 'the the the thing'\n    assert count_unique_words(normal_input_example_2, ignore_words=['the']) == {'thing': 1}\n\n    normal_input_example_3 = \"I'll be home soon!\"\n    assert count_unique_words(normal_input_example_3, count_punc=True) == {\n        \"I'll\": 1, 'be': 1, 'home': 1, 'soon': 1, '!': 1\n    }\n\ndef test_whitespace_splitting_more_robust():\n    # Previously: split(' ') would produce empty-string tokens for multiple spaces/newlines\n    text = \"I   go\\nwhere\\tI go\"\n    assert count_unique_words(text) == {'I': 2, 'go': 2, 'where': 1}\n\ndef test_case_insensitive_option():\n    text = \"The the THE thing\"\n    assert count_unique_words(text, ignore_words=['the'], case_sensitive=False) == {'thing': 1}\n\ndef test_ignore_words_accepts_other_iterables():\n    text = \"a a b\"\n    assert count_unique_words(text, ignore_words={'a'}) == {'b': 1}  # set works\n\ndef test_unexpected_input():\n    # Empty string -&gt; warning + {}\n    with pytest.warns(UserWarning):\n        assert count_unique_words('') == {}\n\n    # Whitespace-only string -&gt; warning + {}\n    with pytest.warns(UserWarning):\n        assert count_unique_words('   \\n\\t') == {}\n\n    with pytest.raises(TypeError):\n        count_unique_words(1)  # text must be str\n\n    with pytest.raises(TypeError):\n        count_unique_words('THE', ignore_words=1)  # ignore_words must be iterable of str\n\n    with pytest.raises(TypeError):\n        count_unique_words('THE', ignore_words=['the', 1])  # must contain only strings\n\n    with pytest.raises(TypeError):\n        count_unique_words('THE', count_punc=1)  # must be bool (int rejected)\n\n    with pytest.raises(TypeError):\n        count_unique_words('THE', case_sensitive=1)  # must be bool (int rejected)\n\ndef test_punctuation_only_when_counting_punc():\n    text = \"!?.,:;\"\n    assert count_unique_words(text, count_punc=True) == {\n        '!': 1, '?': 1, '.': 1, ',': 1, ':': 1, ';': 1\n    }\n\ndef test_punctuation_removed_by_default():\n    text = \"hi!!! hi?\"\n    assert count_unique_words(text) == {'hi': 2}\nWhat changed and why (each change is small and targeted) 1. Whitespace splitting is now correct for “real” text - Change: text.split(’ ‘) → text.split() - Why: split() handles any whitespace (multiple spaces, tabs, newlines) and doesn’t create’’ tokens. That means you no longer need to “clean up” empty keys later. 2. Empty input handling is more explicit - Change: if len(text) == 0 → if text.strip() == “” - Why: ” ” or “ should behave like empty text: return {} and warn. 3. ignore_words accepts any iterable of strings - Change: previously required list; now accepts list | set | tuple | … - Why: It’s a simple usability boost. Passing a set is common and faster for membership checks. 4. ignore_words elements are validated - Change: if ignore_words=[‘the’, 1], we raise TypeError - Why: Failing early with a clear error message prevents weird runtime behavior and makes bugs easier to spot. 5. Added case_sensitive option (default keeps current behavior) - Change: new parameter case_sensitive: bool = True - Why: Your docstring currently says “case-sensitive,” but many users want case-insensitive counts. This option adds that without changing the default behavior. 6. More predictable punctuation counting - Change: when count_punc=True, punctuation is spaced on both sides using r” \\1 ” - Why: This makes tokenization consistent, even when punctuation is stuck to words (e.g., “soon!”). 7. More efficient ignore logic - Change: filter ignored words before counting instead of counting then popping. - Why: It’s simpler and avoids unnecessary work, especially on long texts.\nIf you want one more tiny improvement (still simple): add a keep_numbers: bool = True option to decide whether “2026” should be counted as a word. But the above keeps your original intent and improves robustness without rebuilding anything.\n— End ChatGPT Output\nExplanation of Prompt Usage.\nI first accepted all the ChatGPT changes to the function and test file on the isolated branch “update-count-words” and committed the changes to keep track of the diffs introduced by ChatGPT. Then I validated the changes to the function and tests by using PyTest to look at the coverage and check that all tests passed. If the function does not behave as expected and the tests do not pass, I will revert the function specification to the original and incrementally add small improvements that do not break the function."
   },
   {
-    "objectID": "reference/count_unique_words.html",
-    "href": "reference/count_unique_words.html",
-    "title": "count_unique_words",
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
     "section": "",
-    "text": "count_unique_words(\n    text,\n    ignore_words=None,\n    count_punc=False,\n    case_sensitive=True,\n)\nCount the instances of unique words in a text string.\nBy default, punctuation is removed (except apostrophes inside words). Words are split on any whitespace (spaces/tabs/newlines), not just single spaces.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nString of text to count instances of unique words.\nrequired\n\n\nignore_words\nIterable[str] | None\nWords to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple). Matching respects case_sensitive.\nNone\n\n\ncount_punc\nbool\nIf True, punctuation symbols are tokenized and counted as separate tokens. If False, punctuation is removed (apostrophes inside words are kept).\nFalse\n\n\ncase_sensitive\nbool\nIf False, words are normalized to lowercase before counting (and ignore_words is too).\nTrue\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\ndict[str, int]\nDictionary of tokens to counts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf input types are incorrect or ignore_words contains non-strings.\n\n\n\n\n\n\ncount_unique_words(‘I go where I go’) {‘I’: 2, ‘go’: 2, ‘where’: 1}\ncount_unique_words(‘The the the thing’, ignore_words=[‘the’], case_sensitive=False) {‘thing’: 1}",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "count_unique_words"
-    ]
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n\n\n\nCopyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
   },
   {
-    "objectID": "reference/count_unique_words.html#parameters",
-    "href": "reference/count_unique_words.html#parameters",
-    "title": "count_unique_words",
+    "objectID": "docs/index.html#overview",
+    "href": "docs/index.html#overview",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
     "section": "",
-    "text": "Name\nType\nDescription\nDefault\n\n\n\n\ntext\nstr\nString of text to count instances of unique words.\nrequired\n\n\nignore_words\nIterable[str] | None\nWords to exclude from counting. Accepts any iterable of strings (e.g., list, set, tuple). Matching respects case_sensitive.\nNone\n\n\ncount_punc\nbool\nIf True, punctuation symbols are tokenized and counted as separate tokens. If False, punctuation is removed (apostrophes inside words are kept).\nFalse\n\n\ncase_sensitive\nbool\nIf False, words are normalized to lowercase before counting (and ignore_words is too).\nTrue",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "count_unique_words"
-    ]
+    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:"
   },
   {
-    "objectID": "reference/count_unique_words.html#returns",
-    "href": "reference/count_unique_words.html#returns",
-    "title": "count_unique_words",
+    "objectID": "docs/index.html#copyright",
+    "href": "docs/index.html#copyright",
+    "title": "Welcome to text-parsing-package’s Documentation ’",
     "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\ndict[str, int]\nDictionary of tokens to counts.",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "count_unique_words"
-    ]
-  },
-  {
-    "objectID": "reference/count_unique_words.html#raises",
-    "href": "reference/count_unique_words.html#raises",
-    "title": "count_unique_words",
-    "section": "",
-    "text": "Name\nType\nDescription\n\n\n\n\n\nTypeError\nIf input types are incorrect or ignore_words contains non-strings.",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "count_unique_words"
-    ]
-  },
-  {
-    "objectID": "reference/count_unique_words.html#examples",
-    "href": "reference/count_unique_words.html#examples",
-    "title": "count_unique_words",
-    "section": "",
-    "text": "count_unique_words(‘I go where I go’) {‘I’: 2, ‘go’: 2, ‘where’: 1}\ncount_unique_words(‘The the the thing’, ignore_words=[‘the’], case_sensitive=False) {‘thing’: 1}",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "count_unique_words"
-    ]
-  },
-  {
-    "objectID": "reference/index.html",
-    "href": "reference/index.html",
-    "title": "Function reference",
-    "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique words in a text string.\n\n\nword_chart",
-    "crumbs": [
-      "Reference",
-      "Function reference"
-    ]
-  },
-  {
-    "objectID": "reference/index.html#text-parsing-functions",
-    "href": "reference/index.html#text-parsing-functions",
-    "title": "Function reference",
-    "section": "",
-    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique words in a text string.\n\n\nword_chart",
-    "crumbs": [
-      "Reference",
-      "Function reference"
-    ]
+    "text": "Copyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
   },
   {
     "objectID": "CONTRIBUTING.html",
@@ -187,135 +343,6 @@
     "text": "Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms."
   },
   {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
-    "title": "Changelog",
-    "section": "",
-    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nFirst release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals.\n\n\n\n\n\n\nSecond release\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml\n\n\n\n\n\n\nThird release\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
-  },
-  {
-    "objectID": "CHANGELOG.html#section",
-    "href": "CHANGELOG.html#section",
-    "title": "Changelog",
-    "section": "",
-    "text": "First release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals."
-  },
-  {
-    "objectID": "CHANGELOG.html#section-1",
-    "href": "CHANGELOG.html#section-1",
-    "title": "Changelog",
-    "section": "",
-    "text": "Second release\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml"
-  },
-  {
-    "objectID": "CHANGELOG.html#section-2",
-    "href": "CHANGELOG.html#section-2",
-    "title": "Changelog",
-    "section": "",
-    "text": "Third release\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
-  },
-  {
-    "objectID": "DEVELOPMENT.html",
-    "href": "DEVELOPMENT.html",
-    "title": "Development Guide",
-    "section": "",
-    "text": "Welcome to your shiny new package. This page will help you get started with using Hatch to manage your package.\nIf you look at your project, you will see that a pyproject.toml file. This file stores both your package configuration and settings for development tools like Hatch that you will use to work on your package.\nThis file is written using a .toml format. You can learn more about toml here. Here’s the TL&DR:\n\nEach [] section in the toml file is called a table.\nYou can nest tables with double brackets like this[[]]\nTables contain information about a element that you want to configure.\n\nWe are using Hatch as the default packaging tool. Hatch allows you to configure and run environments and scripts similar to workflow tools like tox or nox.\nHach, by default, uses virtual environments (venv) to manage environments. But you can configure it to use other environment tools.Read the hatch documentation to learn more about environments.\nFor this template, we have set up Hatch environments for you to use. At the bottom of your pyproject.toml file, notice a hatch environment section that looks like this:\n########################################\n# Hatch Environments\n########################################\nBelow is the Hatch environment to install your package. Notice that it defines pip and twine as two packages that the environment needs.\n[tool.hatch.envs.build]\ndescription = \"\"\"Test the installation the package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\nThe table below defines the scripts that you will run build and check your package.\n[tool.hatch.envs.build.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\ndetached = true\nYou can enter that environment to check it out:\n$ hatch shell build\nIf you run pip list, in the environment, twine will be there:\n$ pip list\nHatch by default, installs your package in editable mode (-e) into its virtual environments. But if detached=True is set, then it will skip installing your package into the virtual enviornment.\n\n\nBelow you see the Hatch environment test table.\ntool.hatch.envs says, “Hey, Hatch, this is the definition for an environment.” test is the name of the environment.\nThe environment below defines the dependencies that Hatch needs to install into the environment named test.\n[tool.hatch.envs.test]\ndescription = \"\"\"Run the test suite.\"\"\"\ndependencies = [\n    \"pytest\",\n    \"pytest-cov\",\n    \"pytest-raises\",\n    \"pytest-randomly\",\n    \"pytest-xdist\",\n]\nTo enter a Hatch environment use:\nhatch shell environmentname\nSo you can enter the test environment above with:\nhatch shell test\n\n\n\nIf the environment has a matrix associated with it, that tells Hatch to run the test scripts across different Python versions.\n[[tool.hatch.envs.test.matrix]]\npython = [\"3.10\", \"3.11\", \"3.12\", \"3.13\"]\nIf you run hatch shell test, you will see the output below. To enter an environment with a matrix attached to it, you need to pick the Python environment version that you want to open.\n$ hatch shell test                           \nEnvironment `test` defines a matrix, choose one of the following instead:\n\ntest.py3.10\ntest.py3.11\ntest.py3.12\ntest.py3.13\nOpen the Python 3.13 environment like this:\n$ hatch shell test.py3.13\nTo leave an environment use:\n$ deactivate\n\n\n\nIn the tests section of your pyproject.toml, you will see a tool.hatch.envs.test.scripts table.\nThis table defines the commands that you want Hatch to run in the test environment. Notice that the script has one command called run.\n[tool.hatch.envs.test.scripts]\nrun = \"pytest {args:--cov=greatproject --cov-report=term-missing}\"\nTo run this script , use:\nhatch run test:run\n\nhatch run: calls Hatch and tells it that it will be running a command\ntest:run: defines the environment you want it to run (test) and defines the name of the “script” to berun.\n\nIf you have a Hatch matrix setup for tests, it will both install the necessary Python version using UV and run your tests on each version of the Python versions that you declare in the matrix table. In this case, there are 4 Python versions in the environment, so your tests will run 4 times, once in each Python version listed in the matrix table.\n@lwasser ➜ /workspaces/pyopensci-scipy25-create-python-package (main) $ hatch run test:run\n──────────────────────────────────────────────────────────────────────── test.py3.10 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.10.16, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1490740387\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.10.16-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n──────────────────────────────────────────────────────────────────────── test.py3.11 ────────────────────────────────────────────────────────────────────────\n==================================================================== test session starts ====================================================================\nplatform linux -- Python 3.11.12, pytest-8.4.1, pluggy-1.6.0\nUsing --randomly-seed=1596865075\nrootdir: /workspaces/pyopensci-scipy25-create-python-package\nconfigfile: pyproject.toml\ntestpaths: tests\nplugins: xdist-3.8.0, randomly-3.16.0, raises-0.11, cov-6.2.1\ncollected 2 items                                                                                                                                           \n\ntests/system/test_import.py .                                                                                                                         [ 50%]\ntests/unit/test_example.py .                                                                                                                          [100%]\n\n====================================================================== tests coverage =======================================================================\n_____________________________________________________ coverage: platform linux, python 3.11.12-final-0 ______________________________________________________\n\nName                           Stmts   Miss Branch BrPart    Cover   Missing\n----------------------------------------------------------------------------\nsrc/greatproject/__init__.py       0      0      0      0  100.00%\nsrc/greatproject/example.py        2      0      0      0  100.00%\n----------------------------------------------------------------------------\nTOTAL                              2      0      0      0  100.00%\n===================================================================== 2 passed in 0.05s =====================================================================\n\n\n\nYou can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
-  },
-  {
-    "objectID": "DEVELOPMENT.html#build-your-package",
-    "href": "DEVELOPMENT.html#build-your-package",
-    "title": "Development Guide",
-    "section": "",
-    "text": "You can build your package using the environment and scripts defined in the build tables:\nhatch run build:check\nThis script builds and checks the output distribution files of your package.\nThis build environment table declares that pip and twine should be added to that environment. Adding pip to the environment ensures that it is a current, up-to-date version.\n[tool.hatch.envs.build]\ndescription = \"\"\"Build and test your package.\"\"\"\ndependencies = [\n    \"pip\",\n    \"twine\",\n]\ndetached = true\n# This table installs created the command hatch run install:check which will build and check your package.\n[tool.hatch.envs.install.scripts]\ncheck = [\n    \"pip check\",\n    \"hatch build {args:--clean}\",\n    \"twine check dist/*\",\n]\nThis uses the above environment and tells hatch to run\n\npip check, # verifies your dependencies\nhatch build --clean\n\ntwine check dist/* # this checks your distribution for metadata and other potential issues. to build and test your package."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "Jacob Cann (@Jacob-F-Cann)\nRebecca Sokol-Snyder (@rsokolsnyder)\nWes Beard (@beardw)\n\n\n\n\nThe following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand what the text data they are working with looks like.\nSince processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices.\nEase of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in Relation to Existing Package Ecosystem below).\nThe functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether.\n\n\n\n\nA function to clean/preprocess a block of input text data.\n\nThe function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.\nOptions for how the text block shall be processed will be included in the function as optional arguments.\nThe function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.\n\nA function to count the number instances of unique words in a block of cleaned input text data.\n\nThe function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.\nOptional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.\n\nA function to visualize the top counts or frequencies of occurrence of the words within the input text.\n\nThe function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.\nOptional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.\n\n\n\n\n\n\n\n\npip install text_parsing_package\n\n\n\nThe text_parsing_package is used to clean text, count the words, and plot the results on a bar chart.\nfrom text_parsing_package.clean_text import clean_text\nfrom text_parsing_package.count_words import count_unique_words\nfrom text_parsing_package.word_chart import word_chart\n\ntext = \"The quick brown fox jumped over the fence.\"\ntext_clean = clean_text(text)\ntext_count = count_unique_words(text_clean)\nbar_fig = word_chart(text_count)\nbar_fig # output an altair bar plot\n\n\n\nTo run the test suite, following these steps:\n\nEnsure you have the development environment installed and activated.\nEnter the following command in your terminal.\n\n$ pip install text_parsing_package -e .[tests]\n\nOnce the package has installed with test package requirements, run the following command in your terminal.\n\n$ pytest\n\nTest(s) success and/or failure will be output to the terminal.\n\n\n\n\nTo build the documentation, follow the following steps:\n\nEnsure you have the development environment installed and activated.\nEnter the following command in your terminal.\n\n$ pip install text_parsing_package -e .[docs]\n\nOnce the package has been loaded with the appropriate dependencies, run the following command in your terminal:\n\n$ quartodoc build\n\nTo preview the documentation, run this command:\n\n$ quarto preview\n\n\n\n\n\n\nThere exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example, the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package.\nSimilarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):\n\n\n\n\n\nWordCloud\nScattertext\n\n\n\n\n\nCleanText\nclean-text\n\n\n\n\n\nNLTK\nspaCy\n\n\n\n\n\nThe software code contained within this repository is licensed under the MIT license. See the license file for more information."
-  },
-  {
-    "objectID": "index.html#contributors",
-    "href": "index.html#contributors",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "Jacob Cann (@Jacob-F-Cann)\nRebecca Sokol-Snyder (@rsokolsnyder)\nWes Beard (@beardw)"
-  },
-  {
-    "objectID": "index.html#summary",
-    "href": "index.html#summary",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "The following package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. The goal of the package is to simplify and streamline text processing, such that in a few lines of code the user can easily understand what the text data they are working with looks like.\nSince processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices.\nEase of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in Relation to Existing Package Ecosystem below).\nThe functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether."
-  },
-  {
-    "objectID": "index.html#package-functions",
-    "href": "index.html#package-functions",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "A function to clean/preprocess a block of input text data.\n\nThe function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.\nOptions for how the text block shall be processed will be included in the function as optional arguments.\nThe function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.\n\nA function to count the number instances of unique words in a block of cleaned input text data.\n\nThe function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.\nOptional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.\n\nA function to visualize the top counts or frequencies of occurrence of the words within the input text.\n\nThe function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.\nOptional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.\nThe function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format."
-  },
-  {
-    "objectID": "index.html#installation",
-    "href": "index.html#installation",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "pip install text_parsing_package"
-  },
-  {
-    "objectID": "index.html#usage",
-    "href": "index.html#usage",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "The text_parsing_package is used to clean text, count the words, and plot the results on a bar chart.\nfrom text_parsing_package.clean_text import clean_text\nfrom text_parsing_package.count_words import count_unique_words\nfrom text_parsing_package.word_chart import word_chart\n\ntext = \"The quick brown fox jumped over the fence.\"\ntext_clean = clean_text(text)\ntext_count = count_unique_words(text_clean)\nbar_fig = word_chart(text_count)\nbar_fig # output an altair bar plot"
-  },
-  {
-    "objectID": "index.html#run-tests",
-    "href": "index.html#run-tests",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "To run the test suite, following these steps:\n\nEnsure you have the development environment installed and activated.\nEnter the following command in your terminal.\n\n$ pip install text_parsing_package -e .[tests]\n\nOnce the package has installed with test package requirements, run the following command in your terminal.\n\n$ pytest\n\nTest(s) success and/or failure will be output to the terminal."
-  },
-  {
-    "objectID": "index.html#build-documentation",
-    "href": "index.html#build-documentation",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "To build the documentation, follow the following steps:\n\nEnsure you have the development environment installed and activated.\nEnter the following command in your terminal.\n\n$ pip install text_parsing_package -e .[docs]\n\nOnce the package has been loaded with the appropriate dependencies, run the following command in your terminal:\n\n$ quartodoc build\n\nTo preview the documentation, run this command:\n\n$ quarto preview"
-  },
-  {
-    "objectID": "index.html#relation-to-existing-package-ecosystem",
-    "href": "index.html#relation-to-existing-package-ecosystem",
-    "title": "Text Parsing Package",
-    "section": "",
-    "text": "There exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example, the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package.\nSimilarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):\n\n\n\n\n\nWordCloud\nScattertext\n\n\n\n\n\nCleanText\nclean-text\n\n\n\n\n\nNLTK\nspaCy\n\n\n\n\n\nThe software code contained within this repository is licensed under the MIT license. See the license file for more information."
-  },
-  {
-    "objectID": "reference/word_chart.html",
-    "href": "reference/word_chart.html",
-    "title": "word_chart",
-    "section": "",
-    "text": "word_chart\n\n\n\n\n\nName\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "word_chart"
-    ]
-  },
-  {
-    "objectID": "reference/word_chart.html#functions",
-    "href": "reference/word_chart.html#functions",
-    "title": "word_chart",
-    "section": "",
-    "text": "Name\nDescription\n\n\n\n\nword_chart\nA sorted bar chart of words and their total counts.\n\n\n\n\n\nword_chart.word_chart(words, display_limit=10, display_order='descending')\nA sorted bar chart of words and their total counts.\nThis function takes in a dictionary of words and, along with their counts, produces a bar chart of either the most popular or least popular words. The user has the option of setting the number of words they would like to include in the chart.\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\nDefault\n\n\n\n\nwords\ndict\nA dictionary of words and their counts.\nrequired\n\n\ndisplay_limit\nint\nThe number of words to include in the chart. If there are less than 10 words present, all will be included.\n10\n\n\ndisplay_order\n(str, {ascending, descending})\nThe option to look at the most popular (descending) or least (ascending) popular words.\n\"descending\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\naltair.vegalite.v5.api.Chart\nA bar chart of most or least popular words.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nType\nDescription\n\n\n\n\n\nTypeError\nIf the parameter(s) are not of the correct type.\n\n\n\nValueError\nIf ‘display_order’ parameter is a valid option.\n\n\n\n\n\n\n&gt;&gt;&gt; word_dict = {\"apple\": 12, \"river\": 27, \"cloud\": 5, \"stone\": 19}\n&gt;&gt;&gt; word_chart(word_dict)\n&gt;&gt;&gt; word_chart(word_dict, display_limit=3, display_order=\"ascending\")\n# An altair bar chart will be displayed.",
-    "crumbs": [
-      "Reference",
-      "Text Parsing Functions",
-      "word_chart"
-    ]
-  },
-  {
     "objectID": "reference/clean_text.html",
     "href": "reference/clean_text.html",
     "title": "clean_text",
@@ -340,24 +367,25 @@
     ]
   },
   {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "Welcome to text-parsing-package’s Documentation ’",
+    "objectID": "reference/index.html",
+    "href": "reference/index.html",
+    "title": "Function reference",
     "section": "",
-    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:\n\n\n\n\nCopyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
+    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique words in a text string.\n\n\nword_chart",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
   },
   {
-    "objectID": "docs/index.html#overview",
-    "href": "docs/index.html#overview",
-    "title": "Welcome to text-parsing-package’s Documentation ’",
+    "objectID": "reference/index.html#text-parsing-functions",
+    "href": "reference/index.html#text-parsing-functions",
+    "title": "Function reference",
     "section": "",
-    "text": ":maxdepth: 2 :hidden: :caption: Contents:\nHome \n\nThis is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.\n:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left\nLearn more about myst in our pyOpenSci packaging guide.\n:::\nMyst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:\n:::{toctree}\n:maxdepth: 2\n:caption: Contents:\n:::\nIf you see syntax like the syntax below, you are looking at rst.\n.. toctree::\n   :maxdepth: 2\n   :caption: Contents:"
-  },
-  {
-    "objectID": "docs/index.html#copyright",
-    "href": "docs/index.html#copyright",
-    "title": "Welcome to text-parsing-package’s Documentation ’",
-    "section": "",
-    "text": "Copyright © 2026 Rebecca Sokol-Snyder.\nFree software distributed under the MIT License."
+    "text": "Functions to inspect docstrings.\n\n\n\nclean_text\nA module cleans a string of text and parses it into a list of individual words\n\n\ncount_unique_words\nCount the instances of unique words in a text string.\n\n\nword_chart",
+    "crumbs": [
+      "Reference",
+      "Function reference"
+    ]
   }
 ]

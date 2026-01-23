@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – Text Parsing Package</title>
+<title>About this Package – Text Parsing Package</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -133,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Reference</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../docs/about.html"> 
+    <a class="nav-link active" href="../docs/about.html" aria-current="page"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -149,39 +114,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
-
-
-
-<section id="welcome-to-text-parsing-packages-documentation" class="level1">
-<h1>Welcome to text-parsing-package’s Documentation ’</h1>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<div class="{toctree}">
-<p>:maxdepth: 2 :hidden: :caption: Contents:</p>
-<p>Home <self></self></p>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">About this Package</h1>
 </div>
-<p>This is the landing page of your docs. you can update it as you’d like to. This documentation example uses myst markdown as the primary documentation syntax.</p>
-<p>:::{button-link} https://www.pyopensci.org/python-package-guide/documentation/hosting-tools/myst-markdown-rst-doc-syntax.html :color: primary :class: sd-rounded-pill float-left</p>
-<p>Learn more about myst in our pyOpenSci packaging guide.</p>
-<p>:::</p>
-<p>Myst is a version of markdown that has more formatting flexibility. This is what a sphinx directive looks like using myst markdown formatting:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>:::{toctree}</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="sc">:maxdepth:</span> 2</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="sc">:caption:</span> Contents:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>If you see syntax like the syntax below, you are looking at rst.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode rst code-with-copy"><code class="sourceCode rest"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">.. toctree::</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">:maxdepth:</span> 2</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">:caption:</span> Contents:</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="copyright" class="level2">
-<h2 class="anchored" data-anchor-id="copyright">Copyright</h2>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Since processing, analyzing and visualizing text data is so common, this package provides and alternative to existing packages in the Python ecosystem with specific, but configurable stylistic choices.</p>
+<p>Ease of use and development speed using the package functions will be a major advantage of the this package over others at the expense of a bit of generalization, which is already available in many other packages (see examples in <em>Relation to Existing Package Ecosystem</em> below).</p>
+<p>The functions implemented will be tested against other existing solutions to validate their outputs as being correct, making their use being a stylistic design choice rather than different functionality altogether.</p>
+<ol type="1">
+<li><p>A function to clean/preprocess a block of input text data.</p>
 <ul>
-<li>Copyright © 2026 Rebecca Sokol-Snyder.</li>
-<li>Free software distributed under the MIT License.</li>
+<li>The function will remove punctuation and set all words to lower case for easier analysis, for example to obtain the counts of each of the unique words that appear in the text.</li>
+<li>Options for how the text block shall be processed will be included in the function as optional arguments.</li>
+<li>The function will be implemented such that it can be used independently of the other functions in this package or the following functions below may be used sequentially.</li>
+</ul></li>
+<li><p>A function to count the number instances of unique words in a block of cleaned input text data.</p>
+<ul>
+<li>The function will return a dictionary of unique words as keys and their corresponding values will contain the counts of the word in the input text.</li>
+<li>Optional arguments for the function will modify the return of the counts based on user input, for example ignoring certain words for counting.</li>
+<li>The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided that the input text data is in a compatible format or has been preprocessed using the function in the package.</li>
+</ul></li>
+<li><p>A function to visualize the top counts or frequencies of occurrence of the words within the input text.</p>
+<ul>
+<li>The function will return a bar plot of the frequencies of the top words for ease of visualization, formatted with proper data visualization practices.</li>
+<li>Optional arguments will control what is displayed in the plot generated, for example the maximum number of words to display.</li>
+<li>The function will be implemented such that it can be used independently of the other functions in this package or used sequentially, provided the input is in the proper format.</li>
 </ul>
+<p>There exists other packages in the Python ecosystem which are capable of performing in essence the same tasks as this package, however there are stylistic implementation differences, for which the end-user may prefer. Overall, the landscape for text processing is quite saturated in the python ecosystem. This is due to text parsing being such a common task and the Python ecosystem being so vast. For example, the visualization packages for text data that exist already are not as specific as the implementation contained in this package, they are more generic but may require more lines of code to reproduce the output of this package.</p></li>
+</ol>
+<p>Similarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently “under the hood” than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):</p>
+<section id="package-examples" class="level3">
+<h3 class="anchored" data-anchor-id="package-examples">Package Examples</h3>
+<section id="text-visualization" class="level4">
+<h4 class="anchored" data-anchor-id="text-visualization">Text visualization</h4>
+<ol type="1">
+<li><a href="https://pypi.org/project/wordcloud/">WordCloud</a></li>
+<li><a href="https://pypi.org/project/scattertext/">Scattertext</a></li>
+</ol>
+</section>
+<section id="text-cleaningpreprocessing" class="level4">
+<h4 class="anchored" data-anchor-id="text-cleaningpreprocessing">Text cleaning/preprocessing</h4>
+<ol type="1">
+<li><a href="https://pypi.org/project/cleantext/">CleanText</a></li>
+<li><a href="https://pypi.org/project/clean-text/">clean-text</a></li>
+</ol>
+</section>
+<section id="text-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="text-analysis">Text analysis</h4>
+<ol type="1">
+<li><a href="https://pypi.org/project/nltk/">NLTK</a></li>
+<li><a href="https://pypi.org/project/spacy/">spaCy</a></li>
+</ol>
 
 
 </section>
