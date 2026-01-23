@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Second release
 
-## Changes Added by @Jacob-F-Cann
+### Changes Added by @Jacob-F-Cann
 - Write the initial count_unique_words function implementation
 - Write unit tests for expected and unexpected input to the count_unique_words function
 - Validate tests pass using pytest commands and add dependencies to pyproject.toml
@@ -47,16 +47,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Third release
 
-## Changes Added by @rsokolsnyder
+### Changes Added by @rsokolsnyder
 - Add GitHub Action to run test suite
 - Add additional tests and exception handling for clean_text()
 
-## Changes Added by @Jacob-F-Cann
-- Add GitHub Action to deploy the package to Test PyPI
-- Add additional tests and exception handling for clean_text()
-- Add additional tests and exception handling for clean_text()
-
-## Changes Added by @Jacob-F-Cann
+### Changes Added by @Jacob-F-Cann
 - Add GitHub Action to deploy the package to Test PyPI
 - Accept and validate suggested tweaks to count_unique_words() 
   implementation and additional tests given by ChatGPT 5.2 LLM. 
