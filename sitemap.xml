@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://UBC-MDS.github.io/text-parsing-package/reference/count_unique_words.html</loc>
-    <lastmod>2026-01-23T22:43:50.775Z</lastmod>
+    <lastmod>2026-01-23T22:49:35.587Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/text-parsing-package/reference/word_chart.html</loc>
@@ -17,11 +17,7 @@
     <lastmod>2026-01-23T07:37:13.073Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/text-parsing-package/docs/about.html</loc>
-    <lastmod>2026-01-23T22:33:16.903Z</lastmod>
-  </url>
-  <url>
-    <loc>https://UBC-MDS.github.io/text-parsing-package/CHANGELOG.html</loc>
+    <loc>https://UBC-MDS.github.io/text-parsing-package/docs/misc/ChatGPT_prompt_log.html</loc>
     <lastmod>2026-01-23T07:37:13.065Z</lastmod>
   </url>
   <url>
@@ -29,12 +25,12 @@
     <lastmod>2026-01-22T06:19:32.982Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/text-parsing-package/docs/misc/ChatGPT_prompt_log.html</loc>
+    <loc>https://UBC-MDS.github.io/text-parsing-package/CHANGELOG.html</loc>
     <lastmod>2026-01-23T07:37:13.065Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-MDS.github.io/text-parsing-package/docs/index.html</loc>
-    <lastmod>2026-01-23T07:37:13.065Z</lastmod>
+    <loc>https://UBC-MDS.github.io/text-parsing-package/docs/about.html</loc>
+    <lastmod>2026-01-23T22:33:16.903Z</lastmod>
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/text-parsing-package/CONTRIBUTING.html</loc>
@@ -46,6 +42,6 @@
   </url>
   <url>
     <loc>https://UBC-MDS.github.io/text-parsing-package/reference/index.html</loc>
-    <lastmod>2026-01-23T22:43:50.763Z</lastmod>
+    <lastmod>2026-01-23T22:49:35.575Z</lastmod>
   </url>
 </urlset>
