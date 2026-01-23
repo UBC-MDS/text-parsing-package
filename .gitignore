@@ -245,6 +245,7 @@ cython_debug/
 _version.py
 
 # Publishing site
-.quarto
-_site
-reference
+/_site/
+reference/
+/.quarto/
+/README_files/
