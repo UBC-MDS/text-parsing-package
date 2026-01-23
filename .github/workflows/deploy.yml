@@ -49,14 +49,51 @@ jobs:
         run: |
           pytest --cov --cov-report=term --cov-branch
     
+  render-docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .[docs]
+
+      # manually call quartodoc build
+      - name: quartodoc build
+        run: |
+          quartodoc build
+
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   deploy:
     permissions:
       id-token: write
       contents: write
     # Only run this job if the "run_tests" job passes
-    needs: run_tests
+    needs: 
+      - run_tests
+      - render-docs
 
-    # Only run this job if new work is pushed to "main"
+    #  Only run this job if new work is pushed to "main"
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     # Set up operating system
@@ -68,6 +105,7 @@ jobs:
       - name: Check-out repository
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           token: ${{ secrets.RELEASE_TOKEN }}
 
@@ -76,11 +114,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # - name: Use Python Semantic Release to prepare release
-      #   id: release
-      #   uses: python-semantic-release/python-semantic-release@v8.3.0
-      #   with:
-      #     github_token: ${{ secrets.RELEASE_TOKEN }}
+      - name: Use Python Semantic Release to prepare release
+        id: release
+        uses: python-semantic-release/python-semantic-release@v8.3.0
+        with:
+          github_token: ${{ secrets.RELEASE_TOKEN }}
 
       # We do not have a dev branch
       - name: Install hatch
@@ -93,7 +131,7 @@ jobs:
 
       - name: Publish to TestPyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        # if: steps.release.outputs.released == 'true'
+        if: steps.release.outputs.released == 'true'
         with:
           repository-url: https://test.pypi.org/legacy/
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
