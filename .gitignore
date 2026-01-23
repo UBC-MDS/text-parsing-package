@@ -246,6 +246,6 @@ _version.py
 
 # Publishing site
 /_site/
-reference/
+/reference/
 /.quarto/
 /README_files/
