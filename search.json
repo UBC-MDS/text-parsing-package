@@ -191,7 +191,7 @@
     "href": "CHANGELOG.html",
     "title": "Changelog",
     "section": "",
-    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nFirst release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals.\n\n\n\n\n\n\nSecond release\n\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml\n\n\n\n\n\n\nThird release\n\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAdd additional tests and exception handling for clean_text()\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
+    "text": "All notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning.\n\n\n\nFirst release\n\n\n\n\nFunction description/specification written without code implementation for count_unique_words() in count_words.py\nREADME.md Milestone 1 Sections added detailing the package summary, included functions and relation to Python ecosystem.\n\n\n\n\n\nFunction description/specification written without code implementation for clean_text() in clean_text.py\nCONTRIBUTING.MD updated to remove bug fix and feature implementations\n\n\n\n\n\nFunction description/specification written without code implementation for word_chart() in word_chart.py\nAdded a reference in CONTRIBUTING.md to the CODE_OF_CONDUCT.md.\nUpdated CODE_OF_CONDUCT.md contact individuals.\n\n\n\n\n\n\nSecond release\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml\n\n\n\n\n\n\nThird release\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
   },
   {
     "objectID": "CHANGELOG.html#section",
@@ -205,42 +205,14 @@
     "href": "CHANGELOG.html#section-1",
     "title": "Changelog",
     "section": "",
-    "text": "Second release"
-  },
-  {
-    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
-    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-1",
-    "title": "Changelog",
-    "section": "",
-    "text": "Write the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml"
+    "text": "Second release\n\n\n\n\nWrite the initial count_unique_words function implementation\nWrite unit tests for expected and unexpected input to the count_unique_words function\nValidate tests pass using pytest commands and add dependencies to pyproject.toml\n\n\n\n\n\nWrite function implementation for clean_text() in clean_text.py\nAdd unit tests for clean_text() in test_clean_text.py\nAdd dependencies to pyproject.toml\n\n\n\n\n\nWrite word_chart.py function internals.\nImplement unit tests for word_chart.py.\nAdded word_chart.py package dependencies to pyproject.toml"
   },
   {
     "objectID": "CHANGELOG.html#section-2",
     "href": "CHANGELOG.html#section-2",
     "title": "Changelog",
     "section": "",
-    "text": "Third release"
-  },
-  {
-    "objectID": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
-    "href": "CHANGELOG.html#changes-added-by-rsokolsnyder-2",
-    "title": "Changelog",
-    "section": "",
-    "text": "Add GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()"
-  },
-  {
-    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-2",
-    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-2",
-    "title": "Changelog",
-    "section": "",
-    "text": "Add GitHub Action to deploy the package to Test PyPI\nAdd additional tests and exception handling for clean_text()\nAdd additional tests and exception handling for clean_text()"
-  },
-  {
-    "objectID": "CHANGELOG.html#changes-added-by-jacob-f-cann-3",
-    "href": "CHANGELOG.html#changes-added-by-jacob-f-cann-3",
-    "title": "Changelog",
-    "section": "",
-    "text": "Add GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
+    "text": "Third release\n\n\n\n\nAdd GitHub Action to run test suite\nAdd additional tests and exception handling for clean_text()\n\n\n\n\n\nAdd GitHub Action to deploy the package to Test PyPI\nAccept and validate suggested tweaks to count_unique_words() implementation and additional tests given by ChatGPT 5.2 LLM. Changes and exact model input/output are tracked in the docs/misc/ChatGPT_prompt_log.md file in the repository."
   },
   {
     "objectID": "DEVELOPMENT.html",
