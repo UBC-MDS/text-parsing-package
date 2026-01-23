@@ -49,18 +49,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Changes Added by @rsokolsnyder
 - Add GitHub Action to run test suite
-<<<<<<< HEAD
-- Add additional tests and exception handling for clean_text()
-=======
-<<<<<<< HEAD
->>>>>>> 4195406 (merge changelog.md)
-
-## Changes Added by @Jacob-F-Cann
-- Add GitHub Action to deploy the package to Test PyPI
-- Add additional tests and exception handling for clean_text()
-=======
 - Add additional tests and exception handling for clean_text()
 
 ## Changes Added by @Jacob-F-Cann
 - Add GitHub Action to deploy the package to Test PyPI
->>>>>>> bba91af (merge changelog.md)
+- Add additional tests and exception handling for clean_text()
+- Add additional tests and exception handling for clean_text()
+
+## Changes Added by @Jacob-F-Cann
+- Add GitHub Action to deploy the package to Test PyPI
+- Accept and validate suggested tweaks to count_unique_words() 
+  implementation and additional tests given by ChatGPT 5.2 LLM. 
+  Changes and exact model input/output are tracked in the 
+  docs/misc/ChatGPT_prompt_log.md file in the repository.
