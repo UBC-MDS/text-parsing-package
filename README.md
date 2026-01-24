@@ -2,7 +2,7 @@
 
 ## Summary
 
-This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our [About](docs/about.qmd) page.
+This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our [About](https://ubc-mds.github.io/text-parsing-package/docs/about.html) page.
 
 ## Functions
 
@@ -40,24 +40,31 @@ bar_fig # output an altair bar plot
 
 ## Contributing
 
-To contribute to this project, check out [Contributing](CONTRIBUTING.md).
+To contribute to this project, check out [Contributing](https://ubc-mds.github.io/text-parsing-package/CONTRIBUTING.html).
 
 If you would like to run the tests, and, build and deploy documentation, read below.
 
 ### Clone Repository and Install Package with Development Dependencies
 
-1. Clone this repository and activate the environment.
+1. Clone this [repository](https://github.com/UBC-MDS/text-parsing-package) and activate the environment.
 
 ```bash
 git clone <this_repo> 
+```
+
+Creating the environment is not required, but if you would like you can this way. Make sure to be in the root directory.
+
+```bash
 conda env create -n text_parsing -f environment.yml
 conda activate text_parsing
 ```
 
 2. Navigate to the root of the project directory and install package with dependencies.
 
+Not all dependecies have to be installed, depending on your goal.
+
 ```bash
-pip install -e. [test,dev,docs]
+pip install -e .[tests,dev,docs]
 ```
 
 ### Run Tests
@@ -83,7 +90,7 @@ quarto publish gh-pages
 
 ## Relation to Existing Package Ecosystem
 
-Refer to our [About](docs/about.qmd) page.
+Refer to our [About](https://ubc-mds.github.io/text-parsing-package/docs/about.html) page.
 
 ## Contributors
 
