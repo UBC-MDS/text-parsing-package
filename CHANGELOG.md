@@ -43,7 +43,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Implement unit tests for word_chart.py.
 - Added word_chart.py package dependencies to pyproject.toml
 
-## [0.0.3] - (2026-01-23)
+## [0.2.4] - (2026-01-25)
 
 - Third release
 
@@ -57,3 +57,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   implementation and additional tests given by ChatGPT 5.2 LLM. 
   Changes and exact model input/output are tracked in the 
   docs/misc/ChatGPT_prompt_log.md file in the repository.
+
+### Changes Added by @beardw
+- GitHub actions workflow for documentation deployment
+- Update README.md to include environment and installation instructions
+- Update README.md to include tests, and documentation build and deployment instructions
+- Update documentation site into include an About page
+  
