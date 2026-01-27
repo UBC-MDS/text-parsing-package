@@ -21,7 +21,7 @@ This package aims to aid in the parsing of text data, by providing functions to 
 ```bash
 pip install -i https://test.pypi.org/simple/ text-parsing-package
 ```
-The TestPyPI home page can be viewed [here](https://test.pypi.org/project/text-parsing-package/) and the source distribution distribution
+The TestPyPI home page can be viewed [here](https://test.pypi.org/project/text-parsing-package/) and the source distribution
 can be downloaded [here](https://test.pypi.org/project/text-parsing-package/#files). 
 
 ## Usage
