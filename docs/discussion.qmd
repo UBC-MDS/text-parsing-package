@@ -1,0 +1,60 @@
+---
+title: "Post Project Discussion"
+---
+
+The goal of our project was to create a Python package that allowed users take a body of text, clean it up various different ways, and to count the resulting unique words. A further function takes these counts and creates a bar graph of either the most or least popular words in the text. 
+
+During the development of the project, several different tools and methodologies were used right from the start and all the way throughout, while others were used to complete specific tasks along the way. We have put together some thoughts.
+
+## Development Tools
+
+As with any project, several development tools were used. To start each member was able to become more familiar with their IDE of choice. The two used were JupyterLab and Visual Studio (VS) Code. While both have their strengths, it became apparent that VS Code provided a much better platform to use for package development (for at least one team member).
+
+Here are a few additional highlighted tools:
+
+* Hatch
+    * This was the first time using hatch. A very useful tool that made the initial set up of the package relatively seamless.
+* PyTest
+    * The additional functionality to test for coverage was a useful feature we could use doing developing our tests. It integrated well in our automated workflows.
+* LLMs
+    * During the development of our functions' tests, despite writing our tests, it was evident of the speed and coverage an LLM can bring. Simply using it for creating test data was helpful. Even though our functions were relatively simple, it makes sense why a tool like this could be helpful in generating ideas for normal, but also edge tests cases, when creating the testing suite.
+* Quarto and Quartodoc
+    * Why build a documenation website from stratch, when you don't have to? Diving deeper into Quartodoc and understanding this tool further reinforces the need for reproducible reports and documentation. And, happily, that it doesn't have to be a challenge to implement. Like PyTest, this integrated into the workflows nicely.
+* Badges
+    * It's important to have the supported Python versions and code coverage in an easily visible and accessible mannner. (Tied in with automation, which is even better!) 
+
+## GitHub Infrastructure
+
+Since we have already been using GitHub throughout the entire program, what was helpful was the introduction of additional features and the opportunity to use the site more.
+
+* Issues and Project Boards
+    * The opportunity to use issues more was very helpful in keeping all our tasks documented somewhere. And since a discussion can occur within each one, this further kept everything together. Once paired with the project board, this really helped visuallize where the project was standing.
+* Milestones
+    * Useful to see how this ties in with package development and versioning. Great to use as a summary.
+* Pull Requests
+    * This provided everyone the opportunity and practise to review someone elses changes and foster questions and dialog before merging into main - all in one place.
+* GitHub Actions
+    * As part of CI/CD, several workflows were developed. This really helped illustrate the efficiency these can have on a workflow. But also learning about automating tests, and selecting when these get triggered, helps ensure a healthy project and relatively clean codebase without introducing errors at several possible stages.
+
+## Organizational Practises
+
+Our organizational practises were kept very much in line by the guidelines that were set out from the start and documented in our Team Contract. Open communication at every meeting/chat ensured continued success. 
+
+Furthermore, using all of the tools provided by the GitHub infrastructure, really helped maintain an organized project. This would be highlighted in the use of Issues and a Project board. This helped the project move forward.
+
+And of course, following conventional project guidelines, like folder structure and naming conventions, helped streamline our development process.
+
+## Scaling UP!
+
+If this project were to grow, much of what we have already discussed are good practises to continue and would find themselves worked into the new project. However, we have listed a few areas that could be explored.
+
+* Containerization
+    * With the growth of a team and several different types of work stations, it may be advantageous to have a development container to prevent any "But it runs on my machine" situations. Docker is a popular choice.
+* Formal code ownership
+    * Since our team was small, we may have informally been applying this principal. However, on larger projects and teams it would be best to document and know exactly who is responsible for: specific function, tests, etc. 
+* Specific development branch
+    * While at the end of our project we were beginning to implement this process. It would be good practise to always have a development branch that is merged into and finally merge from it into main.
+* Pull Request reviewers
+    * For our project, we assigned everyone (most times) to review a PR. In scaling up, this would no longer be a feasible workflow. Similar to formal code ownership, reviewers could also be more familiar with different sections of the code they are responsible to review.
+
+All in all, both new and familiar tools were learned and used throughout the course and applied in our project.
