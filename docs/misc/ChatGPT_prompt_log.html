@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -67,14 +67,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="../../">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-594edde8725f282c875fa9812d197b9e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-7cab721f48f771cf82b78cb8e2d60797.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -136,10 +137,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../../docs/about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../docs/discussion.html"> 
-<span class="menu-text">Discussion</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -165,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>— <em>Start ChatGPT Prompt Input</em></p>
 <p>Improve this function specification by handling errors more efficiently or explicitly, improving functionality or options and adding corresponding simple unit tests to validate the changes. Explain each change and why it was made. Make the changes simple and easy to follow, do not rebuild the function from the ground-up.</p>
 <p>Here is the function specification:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">A module containing the count_unique_words function for general use or in</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">conjunction with other modules in the text parsing package. This module aids</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">in numerically analyzing the frequency of unique words in a section of text.</span></span>
@@ -258,9 +255,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove any empty space keys if they exist from punctuation counting</span></span>
 <span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>word_count_dict.pop(<span class="st">''</span>, <span class="va">None</span>)</span>
 <span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> word_count_dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> word_count_dict</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Here is the testing file to be run with pytest:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">Unit tests for the count_unique_words function in the count_unique_words module.</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">This test file aims to validate the output for this function given some expected </span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">input data and unexpected edge case input data.</span></span>
@@ -307,12 +304,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>count_unique_words(abnormal_input_example_3, count_punc<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>abnormal_input_example_4 <span class="op">=</span> <span class="st">"!?.,:;"</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> count_unique_words(abnormal_input_example_4, count_punc<span class="op">=</span><span class="va">True</span>) <span class="op">==</span> {<span class="st">'!'</span>:<span class="dv">1</span>, <span class="st">'?'</span>:<span class="dv">1</span>, <span class="st">'.'</span>:<span class="dv">1</span>, <span class="st">','</span>:<span class="dv">1</span>, <span class="st">':'</span>:<span class="dv">1</span>, <span class="st">';'</span>:<span class="dv">1</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> count_unique_words(abnormal_input_example_4, count_punc<span class="op">=</span><span class="va">True</span>) <span class="op">==</span> {<span class="st">'!'</span>:<span class="dv">1</span>, <span class="st">'?'</span>:<span class="dv">1</span>, <span class="st">'.'</span>:<span class="dv">1</span>, <span class="st">','</span>:<span class="dv">1</span>, <span class="st">':'</span>:<span class="dv">1</span>, <span class="st">';'</span>:<span class="dv">1</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>— <em>End ChatGPT Prompt Input</em></p>
 <p>— <em>Start ChatGPT Output</em></p>
 <p>Below is a small, incremental set of changes that keeps the function’s structure, but makes it more robust, clearer about behavior, and easier to use on “real” text. I also included simple pytest unit tests that validate each change.</p>
 <p>Updated function (minimal refactor, better validation + options)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Iterable, Optional</span>
@@ -411,9 +408,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Filter ignored words before counting (avoids counting then popping)</span></span>
 <span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>    filtered <span class="op">=</span> (w <span class="cf">for</span> w <span class="kw">in</span> words_list <span class="cf">if</span> w <span class="kw">and</span> w <span class="kw">not</span> <span class="kw">in</span> ignore_set)</span>
 <span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">dict</span>(Counter(filtered))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">dict</span>(Counter(filtered))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Updated pytest file (adds tests for the new behavior)</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">"""</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">Unit tests for the count_unique_words function in the count_unique_words module.</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">This test file aims to validate the output for this function given some expected</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">input data and unexpected edge case input data.</span></span>
@@ -479,7 +476,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_punctuation_removed_by_default():</span>
 <span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">"hi!!! hi?"</span></span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_unique_words(text) <span class="op">==</span> {<span class="st">'hi'</span>: <span class="dv">2</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> count_unique_words(text) <span class="op">==</span> {<span class="st">'hi'</span>: <span class="dv">2</span>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>What changed and why (each change is small and targeted) 1. Whitespace splitting is now correct for “real” text - Change: text.split(’ ‘) → text.split() - Why: split() handles any whitespace (multiple spaces, tabs, newlines) and doesn’t create’’ tokens. That means you no longer need to “clean up” empty keys later. 2. Empty input handling is more explicit - Change: if len(text) == 0 → if text.strip() == “” - Why: ” ” or “ should behave like empty text: return {} and warn. 3. ignore_words accepts any iterable of strings - Change: previously required list; now accepts list | set | tuple | … - Why: It’s a simple usability boost. Passing a set is common and faster for membership checks. 4. ignore_words elements are validated - Change: if ignore_words=[‘the’, 1], we raise TypeError - Why: Failing early with a clear error message prevents weird runtime behavior and makes bugs easier to spot. 5. Added case_sensitive option (default keeps current behavior) - Change: new parameter case_sensitive: bool = True - Why: Your docstring currently says “case-sensitive,” but many users want case-insensitive counts. This option adds that without changing the default behavior. 6. More predictable punctuation counting - Change: when count_punc=True, punctuation is spaced on both sides using r” \1 ” - Why: This makes tokenization consistent, even when punctuation is stuck to words (e.g., “soon!”). 7. More efficient ignore logic - Change: filter ignored words before counting instead of counting then popping. - Why: It’s simpler and avoids unnecessary work, especially on long texts.</p>
 <p>If you want one more tiny improvement (still simple): add a keep_numbers: bool = True option to decide whether “2026” should be counted as a word. But the above keeps your original intent and improves robustness without rebuilding anything.</p>
 <p>— <em>End ChatGPT Output</em></p>
@@ -541,13 +538,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
