@@ -243,6 +243,7 @@ cython_debug/
 
 # Hatch-VCS
 _version.py
+src/pytest1/__version__.py
 
 # Publishing site
 /_site/

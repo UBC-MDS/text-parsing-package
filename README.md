@@ -1,5 +1,7 @@
 # Text Parsing Package
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://app.netlify.com/projects/gentle-licorice-3adb9a/deploys)
+
 ## Summary
 
 This package aims to aid in the parsing of text data, by providing functions to clean, analyze and visualize text data. For further details about this project, please refer to our [About](https://ubc-mds.github.io/text-parsing-package/docs/about.html) page.
