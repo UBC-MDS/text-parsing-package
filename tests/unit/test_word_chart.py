@@ -1,3 +1,8 @@
+"""
+Unit tests for the word_chart function in the word_chart module.
+These aim to verify the correct inputs and outputs of the function.
+"""
+
 import altair as alt
 import pandas as pd
 import pytest
