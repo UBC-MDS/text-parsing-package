@@ -49,7 +49,7 @@ If you would like to run the tests, and, build and deploy documentation, read be
 1. Clone this [repository](https://github.com/UBC-MDS/text-parsing-package) and activate the environment.
 
 ```bash
-git clone <this_repo> 
+git clone git@github.com:UBC-MDS/text-parsing-package.git
 ```
 
 Creating the environment is not required, but if you would like you can this way. Make sure to be in the root directory.

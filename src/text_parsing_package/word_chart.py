@@ -1,9 +1,10 @@
-import altair as alt
-import pandas as pd
-
 """
 A module that creates a bar chart from a dictionary of words and their counts.
 """
+
+import altair as alt
+import pandas as pd
+
 
 def word_chart(words: dict, display_limit: int = 10, display_order: str = "descending"): #-> alt.vegalite.v5.api.Chart:
     """A sorted bar chart of words and their total counts.
@@ -35,7 +36,7 @@ def word_chart(words: dict, display_limit: int = 10, display_order: str = "desce
         If the parameter(s) are not of the correct type.
     ValueError
         If 'display_order' parameter is a valid option.
-        
+
     Examples
     --------
     >>> word_dict = {"apple": 12, "river": 27, "cloud": 5, "stone": 19}
@@ -54,8 +55,11 @@ def word_chart(words: dict, display_limit: int = 10, display_order: str = "desce
         raise TypeError(f"The 'display_order' parameter is not of type 'str'. It is of type {type(display_order)}.")
 
     if  display_order not in ["ascending", "descending"]:
-        raise ValueError(f"The 'display_order must either be 'ascending' or 'descending'. It is {display_order}.")
-    
+        raise ValueError(f"The 'display_order' must either be 'ascending' or 'descending'. It is {display_order}.")
+
+    if display_limit <= 0:
+        raise ValueError("The 'display_limit' parameter needs to be greater than zero.")
+
     words = (
         pd.DataFrame.from_dict(
             words,
@@ -63,7 +67,7 @@ def word_chart(words: dict, display_limit: int = 10, display_order: str = "desce
             columns=["count"]
         ).reset_index(names="word")
     )
-    
+
     if display_order == "ascending":
         display_title=f"The {min(display_limit, len(words))} Least Popular Words"
     else:

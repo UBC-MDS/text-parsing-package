@@ -1,3 +1,8 @@
+"""
+Unit tests for the word_chart function in the word_chart module.
+These aim to verify the correct inputs and outputs of the function.
+"""
+
 import altair as alt
 import pandas as pd
 import pytest
@@ -53,8 +58,16 @@ def test_invalid_display_order_parameter():
 def test_invalid_display_order_values():
     """Test that a ValueError is raised when the 'display_order' parameter
     is not a valid option."""
-    with pytest.raises(ValueError, match="'display_order must either be 'ascending' or 'descending'"):
+    with pytest.raises(ValueError, match="'display_order' must either be 'ascending' or 'descending'"):
         word_chart(test_words, display_order="reverse")
+
+def test_invalid_display_limit_values():
+    """Test that a ValueError is raised when the 'display_limit' parameter
+    is not a valid option."""
+    with pytest.raises(ValueError, match="'display_limit' parameter needs to be greater than zero"):
+        word_chart(test_words, display_limit=0)
+        word_chart(test_words, display_limit=-1)
+
 
 # test chart structure
 
