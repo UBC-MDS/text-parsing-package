@@ -63,4 +63,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update README.md to include environment and installation instructions
 - Update README.md to include tests, and documentation build and deployment instructions
 - Update documentation site into include an About page
-  
+
+## [0.3.0] - (2026-02-01)
+
+- Fourth release
+
+### Changes Added by @Jacob-F-Cann
+- Address peer feedback with concrete examples of exisiting packages in the About page
+- Adress peer feedback by adding Netlify, Codecov and License badges to the README
+- Update the deploy.yml workflow, add the docs-preview.yml and pypi-test.yml workflows
