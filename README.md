@@ -109,3 +109,9 @@ Refer to our [About](https://ubc-mds.github.io/text-parsing-package/docs/about.h
 ### License
 
 The software code contained within this repository is licensed under the [MIT license](https://spdx.org/licenses/MIT.html). See the license file for more information.
+
+## Citation
+
+If you use this package, please cite:
+
+Cann, J., Beard, W., Sokol-Snyder, R. (2026) text-parsing-package (Version 0.2.4) [https://test.pypi.org/project/text-parsing-package/](https://test.pypi.org/project/text-parsing-package/)
