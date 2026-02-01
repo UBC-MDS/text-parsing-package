@@ -1,6 +1,6 @@
 # Text Parsing Package
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://app.netlify.com/projects/gentle-licorice-3adb9a/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://pr--gentle-licorice-3adb9a.netlify.app/)
 
 ## Summary
 
