@@ -1,9 +1,10 @@
 # Text Parsing Package
 
 [![Python 3.11](https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![Test PyPI](https://img.shields.io/badge/test--pypi-v0.1.0-blue)](https://test.pypi.org/project/text-parsing-package/)
+[![Test PyPI](https://img.shields.io/badge/test--pypi-v0.2.4-yellow)](https://test.pypi.org/project/text-parsing-package/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://pr--gentle-licorice-3adb9a.netlify.app/)
-
+[![codecov](https://codecov.io/gh/UBC-MDS/text-parsing-package/graph/badge.svg?token=ayZaCUx5YA)](https://codecov.io/gh/UBC-MDS/text-parsing-package)
 
 ## Summary
 
