@@ -1,5 +1,6 @@
 # Text Parsing Package
 
+[![Python Version](https://img.shields.io/test.pypi/pyversions/text-parsing-package)](https://test.pypi.org/project/text-parsing-package/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://pr--gentle-licorice-3adb9a.netlify.app/)
 
 ## Summary
