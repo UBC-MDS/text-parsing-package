@@ -28,5 +28,6 @@ Imports done here to simplify _quarto.yml file.
 from text_parsing_package.clean_text import clean_text
 from text_parsing_package.count_words import count_unique_words
 from text_parsing_package.word_chart import word_chart
+from .__version__ import __version__
 
-__all__ = ['clean_text', 'count_unique_words', 'word_chart']
+__all__ = ['clean_text', 'count_unique_words', 'word_chart', '__version__']
