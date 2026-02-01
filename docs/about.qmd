@@ -32,19 +32,190 @@ being a stylistic design choice rather than different functionality altogether.
 
 Similarly, the text cleaning/preprocessing functionality of this package likely does not exist already in the ecosystem in the exact same implementation and may have stylistic differences, but similar operations can be done with other packages to obtain the same modified text string. The unique word count functionality of this package is likely implemented differently "under the hood" than other solutions present in the ecosystem in the same way, but will produce the same final output as existing packages. Examples of existing packages are shown below (not an exhaustive list):
 
-### Package Examples
+### Existing Package Examples
 
-#### Text visualization
 
-1. [WordCloud](https://pypi.org/project/wordcloud/)
-2. [Scattertext](https://pypi.org/project/scattertext/)
 
-#### Text cleaning/preprocessing
+### Text visualization
 
-1. [CleanText](https://pypi.org/project/cleantext/)
-2. [clean-text](https://pypi.org/project/clean-text/)
 
-#### Text analysis
 
-1. [NLTK](https://pypi.org/project/nltk/)
-2. [spaCy](https://pypi.org/project/spacy/)
+###### 1. [WordCloud on PyPI](https://pypi.org/project/wordcloud/)
+
+[WordCloud GitHub Repository](https://github.com/amueller/word_cloud)
+
+Minimal Example:
+
+```python
+import os
+
+from os import path
+from wordcloud import WordCloud
+
+# get data directory (using getcwd() is needed to support running example in generated IPython notebook)
+d = path.dirname(__file__) if "__file__" in locals() else os.getcwd()
+
+# Read the whole text.
+text = open(path.join(d, 'constitution.txt')).read()
+
+# Generate a word cloud image
+wordcloud = WordCloud().generate(text)
+
+# Display the generated image:
+# the matplotlib way:
+import matplotlib.pyplot as plt
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis("off")
+
+# lower max_font_size
+wordcloud = WordCloud(max_font_size=40).generate(text)
+plt.figure()
+plt.imshow(wordcloud, interpolation="bilinear")
+plt.axis("off")
+plt.show()
+
+# The pil way (if you don't have matplotlib)
+# image = wordcloud.to_image()
+# image.show()
+```
+![](misc/img/wordcloud_example.png)
+
+##### 2. [Scattertext on PyPI](https://pypi.org/project/scattertext/)
+
+[Scattertext GitHub Repository](https://github.com/JasonKessler/scattertext)
+
+Minimal Example:
+
+```python
+import scattertext as st
+
+df = st.SampleCorpora.ConventionData2012.get_data().assign(
+    parse=lambda df: df.text.apply(st.whitespace_nlp_with_sentences)
+)
+
+corpus = st.CorpusFromParsedDocuments(
+    df, category_col='party', parsed_col='parse'
+).build().get_unigram_corpus().compact(st.AssociationCompactor(2000))
+
+html = st.produce_scattertext_explorer(
+    corpus,
+    category='democrat',
+    category_name='Democratic',
+    not_category_name='Republican',
+    minimum_term_frequency=0, 
+    pmi_threshold_coefficient=0,
+    width_in_pixels=1000, 
+    metadata=corpus.get_df()['speaker'],
+    transform=st.Scalers.dense_rank,
+    include_gradient=True,
+    left_gradient_term='More Republican',
+    middle_gradient_term='Metric: Dense Rank Difference',
+    right_gradient_term='More Democratic',
+)
+open('./demo_compact.html', 'w').write(html)
+```
+![](misc/img/scattertext_example.png)
+
+
+
+### Text cleaning/preprocessing
+
+
+
+##### 1. [CleanText on PyPI](https://pypi.org/project/cleantext/)
+
+[CleanText GitHub Repository](https://github.com/prasanthg3/cleantext)
+
+Minimal Example:
+
+```python
+import cleantext
+
+cleantext.clean('This is A s$ample !!!! tExt3% to   cleaN566556+2+59*/133',
+ extra_spaces=True, lowercase=True, numbers=True, punct=True)
+>>>
+'this is a sample text to clean'
+```
+
+##### 2. [clean-text on PyPI](https://pypi.org/project/clean-text/)
+
+[clean-text GitHub Repository](https://github.com/jfilter/clean-text)
+
+Minimal Example:
+
+```python
+from cleantext import clean
+
+# Preserve a literal compound word while removing other punctuation
+clean("drive-thru and text---cleaning", no_punct=True, exceptions=["drive-thru"])
+>>>
+'drive-thru and textcleaning'
+```
+
+
+
+### Text analysis
+
+
+
+1. [NLTK on PyPI](https://pypi.org/project/nltk/)
+
+[NLTK GitHub Repository](https://github.com/nltk/nltk)
+
+Minimal Example:
+
+```python
+>>> import nltk
+>>> sentence = """At eight o'clock on Thursday morning
+... Arthur didn't feel very good."""
+>>> tokens = nltk.word_tokenize(sentence)
+>>> tokens
+['At', 'eight', "o'clock", 'on', 'Thursday', 'morning',
+'Arthur', 'did', "n't", 'feel', 'very', 'good', '.']
+>>> tagged = nltk.pos_tag(tokens)
+>>> tagged[0:6]
+[('At', 'IN'), ('eight', 'CD'), ("o'clock", 'JJ'), ('on', 'IN'),
+('Thursday', 'NNP'), ('morning', 'NN')]
+```
+
+2. [spaCy on PyPI](https://pypi.org/project/spacy/)
+
+[spaCy GitHub Repository](https://github.com/explosion/spaCy)
+
+Minimal Example:
+
+```python
+# pip install -U spacy
+# python -m spacy download en_core_web_sm
+import spacy
+
+# Load English tokenizer, tagger, parser and NER
+nlp = spacy.load("en_core_web_sm")
+
+# Process whole documents
+text = ("When Sebastian Thrun started working on self-driving cars at "
+        "Google in 2007, few people outside of the company took him "
+        "seriously. “I can tell you very senior CEOs of major American "
+        "car companies would shake my hand and turn away because I wasn’t "
+        "worth talking to,” said Thrun, in an interview with Recode earlier "
+        "this week.")
+doc = nlp(text)
+
+# Analyze syntax
+print("Noun phrases:", [chunk.text for chunk in doc.noun_chunks])
+print("Verbs:", [token.lemma_ for token in doc if token.pos_ == "VERB"])
+
+# Find named entities, phrases and concepts
+for entity in doc.ents:
+    print(entity.text, entity.label_)
+>>>
+'''Noun phrases: ['Sebastian Thrun', 'self-driving cars', 'Google', 'few people', 'the company', 'him', 'I', 'you', 'very senior CEOs', 'major American car companies', 'my hand', 'I', 'Thrun', 'an interview', 'Recode']
+Verbs: ['start', 'work', 'drive', 'take', 'tell', 'shake', 'turn', 'talk', 'say']
+Sebastian Thrun PERSON
+Google ORG
+2007 DATE
+American NORP
+Thrun GPE
+Recode ORG
+earlier this week DATE'''
+```
