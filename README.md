@@ -1,6 +1,6 @@
 # Text Parsing Package
 
-[![Python 3.11](https://img.shields.io/badge/python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Python Versions](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![Test PyPI](https://img.shields.io/badge/test--pypi-v0.2.4-yellow)](https://test.pypi.org/project/text-parsing-package/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b9273ab0-5b6f-435d-8c86-5323521dd7fc/deploy-status)](https://app.netlify.com/projects/gentle-licorice-3adb9a/deploys)
@@ -109,3 +109,9 @@ Refer to our [About](https://ubc-mds.github.io/text-parsing-package/docs/about.h
 ### License
 
 The software code contained within this repository is licensed under the [MIT license](https://spdx.org/licenses/MIT.html). See the license file for more information.
+
+## Citation
+
+If you use this package, please cite:
+
+Cann, J., Beard, W., Sokol-Snyder, R. (2026) text-parsing-package (Version 0.2.4) [https://test.pypi.org/project/text-parsing-package/](https://test.pypi.org/project/text-parsing-package/)
